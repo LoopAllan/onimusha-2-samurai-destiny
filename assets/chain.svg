@@ -1,0 +1,43 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 180"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">首飾交換關聯示意</title>
+  <desc id="desc">
+    白墨、平家物語、徽章、哈密瓜、交付男子、回訪父親。原創示意，不是地圖。
+  </desc>
+  <rect width="900" height="180" fill="#1d2420" />
+  <g fill="none" stroke="#e6c58d" stroke-width="2">
+    <path d="M90 65H810" />
+    <path d="m230 60 8 5-8 5m150-10 8 5-8 5m150-10 8 5-8 5m150-10 8 5-8 5" />
+  </g>
+  <g fill="#1d2420" stroke="#e6c58d" stroke-width="2">
+    <circle cx="75" cy="65" r="29" />
+    <circle cx="225" cy="65" r="29" />
+    <circle cx="375" cy="65" r="29" />
+    <circle cx="525" cy="65" r="29" />
+    <circle cx="675" cy="65" r="29" />
+    <circle cx="825" cy="65" r="29" />
+  </g>
+  <g
+    fill="#f0eee3"
+    font-family="sans-serif"
+    font-size="20"
+    text-anchor="middle"
+  >
+    <text x="75" y="72">1</text>
+    <text x="225" y="72">2</text>
+    <text x="375" y="72">3</text>
+    <text x="525" y="72">4</text>
+    <text x="675" y="72">5</text>
+    <text x="825" y="72">6</text>
+    <text x="75" y="125">白墨</text>
+    <text x="225" y="125">平家物語</text>
+    <text x="375" y="125">徽章</text>
+    <text x="525" y="125">哈密瓜</text>
+    <text x="675" y="125">交付男子</text>
+    <text x="825" y="125">回訪父親</text>
+  </g>
+</svg>
