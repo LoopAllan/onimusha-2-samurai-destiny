@@ -13,14 +13,14 @@ const home = `
 <section class="hero">
   <p class="eyebrow">SAMURAI'S DESTINY · FIELD NOTES</p>
   <h1>從旅途入口，選擇要查的手帖。</h1>
-  <p>本站按攻略類別分頁整理；目前可操作的研究切片是角色送禮交換手帖，其餘頁面保留清楚的研究邊界。</p>
+  <p>本站按攻略類別分頁整理；目前已發布柳生之庄開場流程與角色送禮交換手帖，其餘頁面保留清楚的研究邊界。</p>
   <div class="badges"><span>繁體中文</span><span>PS4 Remaster／PS2 原版分開核對</span><span>來源文字核對 · 未實機驗證</span></div>
 </section>
 <section class="entry-panel panel" aria-labelledby="available-now">
   <p class="eyebrow">AVAILABLE NOW</p>
-  <h2 id="available-now">目前可讀：角色／送禮</h2>
-  <p>進入現有的白墨起始交換鏈手帖，依版本查看來源、時間窗與本機進度。</p>
-  <a class="button-link" href="./companions.html">開啟角色送禮手帖</a>
+  <h2 id="available-now">目前可讀：開場流程與角色送禮</h2>
+  <p>先走完柳生之庄開場，或進入白墨起始交換鏈；兩者都能依版本查看名稱狀態與逐項來源。</p>
+  <p><a class="button-link" href="./walkthrough.html">開啟柳生之庄流程</a> <a class="button-link" href="./companions.html">開啟角色送禮手帖</a></p>
 </section>`;
 
 function researchPage({ section, heading, intro, panelHeading, panelBody, extra = "" }) {
@@ -33,15 +33,17 @@ function researchPage({ section, heading, intro, panelHeading, panelBody, extra 
 <section class="panel"><h2>${panelHeading}</h2><p>${panelBody}</p>${extra}</section>`;
 }
 
-const walkthrough = researchPage({
-  section: "WALKTHROUGH",
-  heading: "主線流程正在建立查證順序。",
-  intro:
-    "本頁將整理事件前後關係、分歧與容易錯過的檢查點。目前沒有足夠資料發布逐章路線，因此不把送禮切片改寫成主線攻略。",
-  panelHeading: "預定收錄界線",
-  panelBody:
-    "章節名稱、事件條件與版本差異會在來源可追溯後逐項加入；現階段不提供推測性的前進指示。",
-});
+const walkthrough = `
+<section class="hero" data-status="published-slice">
+  <p class="eyebrow">WALKTHROUGH · OPENING SLICE</p>
+  <h1>從柳生之庄走到今庄。</h1>
+  <p>第一批主線攻略涵蓋開場、湖邊、洞窟、柳生陣屋與舞雷刀。流程與名稱按 PS2／2025 Remaster 分開投影；待核語言不跨版本補值。</p>
+  <div class="status-row"><span class="badge verified">來源逐項核對</span><span class="badge unknown">非官方／非完整攻略</span></div>
+</section>
+<section class="panel walkthrough-intro"><h2>本批次界線</h2><p>起點為柳生之庄開場，終點為取得舞雷刀並前往今庄。啟動祠堂前的陣屋清單是本切片唯一標示的離區檢查點；後續今庄流程仍維持研究中。</p></section>
+<div id="walkthrough-root" aria-live="polite">正在載入流程資料……</div>
+<section class="panel"><h2>名稱狀態怎麼看</h2><p><strong>實機畫面核對</strong>只表示來源頁的目標版本畫面直接顯示該名稱；<strong>來源列名</strong>表示攻略文字使用此名稱但沒有同頁 UI 畫面；<strong>本站暫譯</strong>與<strong>待核</strong>都不是遊戲內正式譯名。</p></section>
+<section class="panel"><h2>本切片來源</h2><div id="walkthrough-sources"></div></section>`;
 
 const collectibles = researchPage({
   section: "COLLECTIBLES",
@@ -137,7 +139,7 @@ const content = {
 
 const descriptions = {
   home: "鬼武者2 繁中旅途手帖：依攻略類別進入來源可追溯的研究頁面。",
-  walkthrough: "鬼武者2 主線流程研究頁：保留來源與版本查證邊界。",
+  walkthrough: "鬼武者2 主線流程：柳生之庄開場到舞雷刀的版本分離來源攻略。",
   companions: "鬼武者2 角色送禮手帖：分版本追蹤一條有來源的交換鏈。",
   collectibles: "鬼武者2 道具收集研究頁：逐筆核對版本、位置與來源。",
   equipment: "鬼武者2 裝備與道具研究頁：名稱、用途與取得條件待核。",
@@ -176,10 +178,10 @@ function renderPage(page) {
   <div class="layout">
     <nav id="navigation" aria-label="主導覽"><p class="eyebrow">旅途索引</p>${renderNavigation(page.key)}<p class="nav-note">各類別獨立成頁。<br />已發布資料標示來源與版本；其餘維持研究中。</p></nav>
     <main id="main">${content[page.key]}
-      <footer><h2>來源與查證界線</h2><p>已核對網頁文字，不等於官方認證或實機驗證。PS2 與 PS4 資料分開判定；繁中名稱為本站編輯譯名，未知內容維持待核。</p>${page.key === "companions" ? '<div id="sources"></div>' : ""}<p>本機手帖 · 非官方攻略 · 第一階段</p></footer>
+      <footer><h2>來源與查證界線</h2><p>已核對網頁文字，不等於官方認證或實機驗證。PS2 與 PS4 資料分開判定；繁中名稱為本站編輯譯名，未知內容維持待核。</p>${page.key === "companions" ? '<div id="sources"></div>' : ""}<p>本機手帖 · 非官方攻略 · 持續查證發布</p></footer>
     </main>
   </div>
-  <script type="module" src="./src/shell.js"></script>${page.key === "companions" ? '\n  <script type="module" src="./src/app.js"></script>' : ""}
+  <script type="module" src="./src/shell.js"></script>${page.key === "companions" ? '\n  <script type="module" src="./src/app.js"></script>' : page.key === "walkthrough" ? '\n  <script type="module" src="./src/walkthrough-app.js"></script>' : ""}
 </body>
 </html>
 `;

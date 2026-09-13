@@ -217,7 +217,53 @@ try {
     assert.deepEqual(probeErrors, [], variant);
     await probe.close();
   }
+  await page.goto(
+    `http://127.0.0.1:${server.address().port}/guide/walkthrough.html`,
+  );
+  await page.waitForSelector("#walkthrough-root article", { timeout: 5000 });
+  assert.equal(await page.locator("#walkthrough-root article").count(), 5);
+  assert.deepEqual(
+    await page.locator("#walkthrough-root article").evaluateAll((nodes) =>
+      nodes.map((node) => Number(node.dataset.sequence)),
+    ),
+    [10, 20, 30, 40, 50],
+  );
+  assert.match(await page.locator("#yagyu-village-path").innerText(), /Yagyu Village Map/);
+  assert.match(await page.locator("#yagyu-village-path").innerText(), /日文 名稱待核/);
+  assert.match(await page.locator("#yagyu-dragon-shrine").innerText(), /離開目前區域/);
+  assert.doesNotMatch(await page.locator("#yagyu-dragon-shrine").innerText(), /不可逆推進/);
+  const ps4SourceTitles = await page
+    .locator("#walkthrough-sources a")
+    .evaluateAll((links) => links.map((link) => link.textContent));
+  assert.deepEqual(ps4SourceTitles, [
+    "Yagyu Village (1st Visit) — Onimusha 2 Remaster",
+    "Onimusha 2: Samurai's Destiny Remaster walkthrough part 1 — YouTube",
+  ]);
+  assert.equal(await page.locator("#walkthrough-root .walkthrough-instructions .citation-line").count() > 0, true);
+  assert.ok(
+    await page.locator("#walkthrough-sources a").evaluateAll((links) =>
+      links.every((link) => link.target === "_blank" && link.rel === "noopener noreferrer"),
+    ),
+  );
+  await page.selectOption("#version", "ps2");
+  assert.match(await page.locator("#yagyu-village-path").innerText(), /柳生の庄の地図/);
+  assert.match(await page.locator("#yagyu-village-path").innerText(), /Map of the Yagyu Village/);
+  assert.match(await page.locator("#walkthrough-root").innerText(), /EN 名稱來源衝突/);
+  const ps2SourceTitles = await page
+    .locator("#walkthrough-sources a")
+    .evaluateAll((links) => links.map((link) => link.textContent));
+  assert.equal(ps2SourceTitles.length, 7);
+  assert.ok(!ps2SourceTitles.includes("Yagyu Village (1st Visit) — Onimusha 2 Remaster"));
+  assert.ok(!ps2SourceTitles.includes("Onimusha 2: Samurai's Destiny Remaster walkthrough part 1 — YouTube"));
+  for (const width of [360, 768, 1280]) {
+    await page.setViewportSize({ width, height: 850 });
+    assert.ok(
+      await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+      `walkthrough overflow at ${width}`,
+    );
+  }
   if (process.env.SCREENSHOT_DIR) {
+    await page.setViewportSize({ width: 360, height: 850 });
     await page.evaluate(() => scrollTo(0, 0));
     await page.screenshot({
       path: `${process.env.SCREENSHOT_DIR}/mobile.png`,
