@@ -31,16 +31,33 @@ const server = createServer(async (req, res) => {
   }
 }).listen(0, "127.0.0.1");
 await new Promise((r) => server.on("listening", r));
-const browser = await chromium.launch({
-  headless: true,
-  args: ["--no-sandbox"],
-});
+let browser;
 try {
+  browser = await chromium.launch({
+    headless: true,
+    args: ["--no-sandbox"],
+  });
   const page = await browser.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(`http://127.0.0.1:${server.address().port}/guide/`);
+  assert.equal(
+    await page.locator('[aria-current="page"]').getAttribute("href"),
+    "./index.html",
+  );
+  await page.locator('nav a[href="./companions.html"]').click();
+  await page.waitForURL(
+    `http://127.0.0.1:${server.address().port}/guide/companions.html`,
+  );
   await page.waitForSelector("#version", { timeout: 5000 });
+  await page.reload();
+  await page.goBack();
+  await page.waitForURL(`http://127.0.0.1:${server.address().port}/guide/`);
+  await page.goForward();
+  await page.waitForURL(
+    `http://127.0.0.1:${server.address().port}/guide/companions.html`,
+  );
+  await page.waitForSelector('[data-content="companions-notebook"]');
   assert.equal(await page.locator("#version").inputValue(), "ps4");
   assert.equal(await page.locator("nav a").count(), 8);
   assert.match(
@@ -159,7 +176,9 @@ try {
     await probe.route("**/data/guide.json", (route) =>
       route.fulfill({ json: data }),
     );
-    await probe.goto(`http://127.0.0.1:${server.address().port}/guide/`);
+    await probe.goto(
+      `http://127.0.0.1:${server.address().port}/guide/companions.html`,
+    );
     await probe.waitForFunction(
       () =>
         document.querySelector("#chain article") ||
@@ -201,9 +220,9 @@ try {
   }
   assert.deepEqual(errors, []);
   console.log(
-    "Browser PASS: subpath, full PS4 chain, persisted/version-isolated progress, scoped reset, aliases, filters, upstream/downstream, 360/768/1280 overflow, menu Escape, no JS errors.",
+    "Browser PASS: multipage subpath direct/reload/back-forward, full PS4 chain, persisted/version-isolated progress, scoped reset, aliases, filters, upstream/downstream, 360/768/1280 overflow, menu Escape, no JS errors.",
   );
 } finally {
-  await browser.close();
-  server.close();
+  if (browser) await browser.close();
+  await new Promise((resolveClosed) => server.close(resolveClosed));
 }

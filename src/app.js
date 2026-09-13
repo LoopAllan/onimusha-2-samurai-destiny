@@ -37,7 +37,7 @@ async function start() {
     storage = null;
   }
   const progress = createProgress(storage);
-  let state = progress.load("ps4");
+  let state = progress.load($("version").value);
   let selectedItem = null;
   const entities = new Map(data.entities.map((e) => [e.id, e]));
   const scoped = () =>
@@ -276,22 +276,6 @@ async function start() {
   });
   for (const id of ["search", "stage-filter", "recipient", "spoilers"])
     $(id).addEventListener(id === "search" ? "input" : "change", render);
-  function closeMenu() {
-    $("navigation").classList.remove("open");
-    $("menu").setAttribute("aria-expanded", "false");
-  }
-  $("menu").addEventListener("click", () => {
-    const open = $("navigation").classList.toggle("open");
-    $("menu").setAttribute("aria-expanded", String(open));
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeMenu();
-      $("menu").focus();
-    }
-  });
-  for (const a of document.querySelectorAll("nav a"))
-    a.addEventListener("click", closeMenu);
   render();
 }
 start().catch((error) => {

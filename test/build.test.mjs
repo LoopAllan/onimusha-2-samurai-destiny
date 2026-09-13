@@ -10,7 +10,12 @@ test("static build validates data and uses relative URLs for Pages subpath", () 
   assert.equal(r.status, 0, r.stderr);
   const html = readFileSync("dist/index.html", "utf8");
   assert.match(html, /lang="zh-TW"/);
-  assert.match(html, /src="\.\/src\/app.js"/);
+  assert.match(html, /src="\.\/src\/shell.js"/);
+  assert.doesNotMatch(html, /src="\.\/src\/app.js"/);
+  assert.match(
+    readFileSync("dist/companions.html", "utf8"),
+    /src="\.\/src\/app.js"/,
+  );
   assert.ok(existsSync("dist/data/guide.json"));
   assert.doesNotMatch(html, /(?:src|href)="\/(?!\/)/);
   assert.ok(!existsSync("dist/test"));
