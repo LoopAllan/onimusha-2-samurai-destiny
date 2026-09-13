@@ -1,10 +1,13 @@
 import { cp, mkdir, rm, readFile, writeFile } from "node:fs/promises";
 import { validate } from "../src/validate.js";
 import { renderSite } from "./site.mjs";
+import { validateAssets } from "./validate-assets.mjs";
 const root = new URL("../", import.meta.url);
-const errors = validate(
-  JSON.parse(await readFile(new URL("data/guide.json", root), "utf8")),
-);
+const data = JSON.parse(await readFile(new URL("data/guide.json", root), "utf8"));
+const errors = [
+  ...validate(data),
+  ...(await validateAssets({ media: data.media, renderedPaths: data.media.map((item) => item.path), root })),
+];
 if (errors.length) throw new Error(errors.join("\n"));
 await rm(new URL("dist/", root), { recursive: true, force: true });
 await mkdir(new URL("dist/", root));

@@ -4,36 +4,83 @@
       "id": "capcom-en",
       "title": "CAPCOM 官方英文介紹",
       "url": "https://www.capcom-games.com/onimusha/2/en-uk/",
-      "versions": ["ps2", "ps4"]
+      "versions": [
+        "ps2",
+        "ps4"
+      ]
     },
     {
       "id": "capcom-ja",
       "title": "CAPCOM 官方日文介紹",
       "url": "https://www.capcom-games.com/onimusha/2/ja-jp/",
-      "versions": ["ps2", "ps4"]
+      "versions": [
+        "ps2",
+        "ps4"
+      ]
     },
     {
       "id": "app-melon",
       "title": "AppMedia：メロンの入手方法と使い道",
       "url": "https://appmedia.jp/onimusha2/78917888",
-      "versions": ["ps4"]
+      "versions": [
+        "ps4"
+      ]
     },
     {
       "id": "app-necklace",
       "title": "AppMedia：橙の首飾の防具データ",
       "url": "https://appmedia.jp/onimusha2/78919586",
-      "versions": ["ps4"]
+      "versions": [
+        "ps4"
+      ]
     },
     {
       "id": "xgm-town",
       "title": "XGameMania：今庄の町 注10・17",
       "url": "https://xgamemania.com/onimusha/2/map/2.html",
-      "versions": ["ps2"]
+      "versions": [
+        "ps2"
+      ]
+    },
+    {
+      "id": "gf-gifts",
+      "title": "GameFAQs：Gift Item FAQ（PS2）",
+      "url": "https://gamefaqs.gamespot.com/ps2/520511-onimusha-2-samurais-destiny/faqs/19144",
+      "versions": [
+        "ps2"
+      ]
+    },
+    {
+      "id": "xgm-items",
+      "title": "XGameMania：受け渡しアイテム一覧",
+      "url": "https://xgamemania.com/onimusha/2/event/item.html",
+      "versions": [
+        "ps2"
+      ]
+    },
+    {
+      "id": "xgm-gear",
+      "title": "XGameMania：十兵衛專用裝備資料",
+      "url": "https://xgamemania.com/onimusha/2/item2-1.html",
+      "versions": [
+        "ps2"
+      ]
+    },
+    {
+      "id": "solo-imasho",
+      "title": "SoloPlayGuide：Imasho Town 2nd Visit",
+      "url": "https://soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/04-imasho-town-2nd-visit",
+      "versions": [
+        "ps4"
+      ]
     }
   ],
   "entities": [
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -45,10 +92,16 @@
       "ja": "柳生十兵衛",
       "aliases": [],
       "kind": "character",
-      "sourceIds": ["capcom-en", "capcom-ja"]
+      "sourceIds": [
+        "capcom-en",
+        "capcom-ja"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -60,10 +113,16 @@
       "ja": "小谷のお邑",
       "aliases": [],
       "kind": "character",
-      "sourceIds": ["capcom-en", "capcom-ja"]
+      "sourceIds": [
+        "capcom-en",
+        "capcom-ja"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -75,10 +134,16 @@
       "ja": "安国寺恵瓊",
       "aliases": [],
       "kind": "character",
-      "sourceIds": ["capcom-en", "capcom-ja"]
+      "sourceIds": [
+        "capcom-en",
+        "capcom-ja"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -90,10 +155,16 @@
       "ja": "雑賀孫市",
       "aliases": [],
       "kind": "character",
-      "sourceIds": ["capcom-en", "capcom-ja"]
+      "sourceIds": [
+        "capcom-en",
+        "capcom-ja"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -105,10 +176,16 @@
       "ja": "風魔小太郎",
       "aliases": [],
       "kind": "character",
-      "sourceIds": ["capcom-en", "capcom-ja"]
+      "sourceIds": [
+        "capcom-en",
+        "capcom-ja"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -116,14 +193,80 @@
       "note": "已核對網頁文字，未實機驗證；繁中為本站編輯譯名。",
       "id": "chalk",
       "name": "白墨",
-      "en": null,
+      "en": "Chalk",
       "ja": "白墨",
-      "aliases": ["粉筆"],
+      "aliases": [
+        "粉筆"
+      ],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ],
+      "detail": {
+        "explanation": [
+          {
+            "versions": ["ps2"],
+            "text": "石灰岩碎塊，可在板或石頭上書寫。",
+            "sourceIds": ["gf-gifts", "xgm-items"]
+          },
+          {
+            "versions": ["ps4"],
+            "text": "Remaster 交換鏈中，在今庄道具店取得的回禮道具；更詳細的道具說明文字待核。",
+            "sourceIds": ["app-melon"]
+          }
+        ],
+        "thumbnailId": "thumb-chalk",
+        "acquisition": [
+          {
+            "versions": [
+              "ps2"
+            ],
+            "text": "取得紅色環後，在今庄道具店與後方男子交談領取；在聖之玉前完成。",
+            "actionIds": [
+              "ps2-chalk"
+            ],
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          {
+            "versions": [
+              "ps4"
+            ],
+            "text": "取得紅色環後，在今庄道具店與後方男子交談領取；在聖之玉前完成。",
+            "actionIds": [
+              "ps4-chalk"
+            ],
+            "sourceIds": [
+              "app-melon",
+              "app-necklace"
+            ]
+          }
+        ],
+        "mapGuidance": [
+          {
+            "versions": [
+              "ps2",
+              "ps4"
+            ],
+            "status": "available",
+            "text": "回到今庄道具店；此為原創非空間互動示意，不提供比例、轉彎或距離。",
+            "routeId": "imasho-shop",
+            "stopId": "rear-man",
+            "sourceIds": [
+              "xgm-town",
+              "solo-imasho"
+            ]
+          }
+        ]
+      }
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -131,14 +274,76 @@
       "note": "已核對網頁文字，未實機驗證；繁中為本站編輯譯名。",
       "id": "heike",
       "name": "平家物語",
-      "en": null,
+      "en": "Tale of the Heike",
       "ja": "平家物語",
       "aliases": [],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ],
+      "detail": {
+        "explanation": [
+          {
+            "versions": ["ps2"],
+            "text": "描述平氏與源氏之戰及平氏滅亡的故事，與琵琶法師相關。",
+            "sourceIds": ["gf-gifts", "xgm-items"]
+          },
+          {
+            "versions": ["ps4"],
+            "text": "Remaster 交換鏈中，將白墨交給惠瓊後取得；更詳細的道具說明文字待核。",
+            "sourceIds": ["app-melon"]
+          }
+        ],
+        "thumbnailId": "thumb-heike",
+        "acquisition": [
+          {
+            "versions": [
+              "ps2"
+            ],
+            "text": "將白墨交給惠瓊，固定換得。",
+            "actionIds": [
+              "ps2-heike"
+            ],
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          {
+            "versions": [
+              "ps4"
+            ],
+            "text": "將白墨交給惠瓊，固定換得。",
+            "actionIds": [
+              "ps4-heike"
+            ],
+            "sourceIds": [
+              "app-melon",
+              "app-necklace"
+            ]
+          }
+        ],
+        "mapGuidance": [
+          {
+            "versions": [
+              "ps2",
+              "ps4"
+            ],
+            "status": "not-established",
+            "text": "本切片未建立可來源支持的地圖位置。",
+            "sourceIds": [
+              "xgm-items",
+              "solo-imasho"
+            ]
+          }
+        ]
+      }
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -146,14 +351,76 @@
       "note": "已核對網頁文字，未實機驗證；繁中為本站編輯譯名。",
       "id": "emblem",
       "name": "徽章",
-      "en": null,
+      "en": "Emblem",
       "ja": "エンブレム",
       "aliases": [],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ],
+      "detail": {
+        "explanation": [
+          {
+            "versions": ["ps2"],
+            "text": "西班牙海軍的銀色徽章，據述由王族贈與。",
+            "sourceIds": ["gf-gifts", "xgm-items"]
+          },
+          {
+            "versions": ["ps4"],
+            "text": "Remaster 交換鏈中，將平家物語交給孫市後取得；更詳細的道具說明文字待核。",
+            "sourceIds": ["app-melon"]
+          }
+        ],
+        "thumbnailId": "thumb-emblem",
+        "acquisition": [
+          {
+            "versions": [
+              "ps2"
+            ],
+            "text": "將平家物語交給孫市，固定換得。",
+            "actionIds": [
+              "ps2-emblem"
+            ],
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          {
+            "versions": [
+              "ps4"
+            ],
+            "text": "將平家物語交給孫市，固定換得。",
+            "actionIds": [
+              "ps4-emblem"
+            ],
+            "sourceIds": [
+              "app-melon",
+              "app-necklace"
+            ]
+          }
+        ],
+        "mapGuidance": [
+          {
+            "versions": [
+              "ps2",
+              "ps4"
+            ],
+            "status": "not-established",
+            "text": "本切片未建立可來源支持的地圖位置。",
+            "sourceIds": [
+              "xgm-items",
+              "solo-imasho"
+            ]
+          }
+        ]
+      }
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -161,14 +428,83 @@
       "note": "已核對網頁文字，未實機驗證；繁中為本站編輯譯名。",
       "id": "melon",
       "name": "哈密瓜",
-      "en": null,
+      "en": {
+        "ps2": "Melon",
+        "ps4": "Cantaloupe"
+      },
       "ja": "メロン",
-      "aliases": ["甜瓜"],
+      "aliases": [
+        "甜瓜"
+      ],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ],
+      "detail": {
+        "explanation": [
+          {
+            "versions": ["ps2"],
+            "text": "PS2 資料稱西班牙的綠色水果，汁多而甜；日文資料另稱以桐箱盛裝的高級品。",
+            "sourceIds": ["gf-gifts", "xgm-items"]
+          },
+          {
+            "versions": ["ps4"],
+            "text": "Remaster 交換鏈中，將徽章交給小太郎後可取得；更詳細的道具說明文字待核。",
+            "sourceIds": ["app-melon"]
+          }
+        ],
+        "thumbnailId": "thumb-melon",
+        "acquisition": [
+          {
+            "versions": [
+              "ps2"
+            ],
+            "text": "將徽章交給小太郎，固定換得；在聖之玉前交給道具店男子。",
+            "actionIds": [
+              "ps2-melon"
+            ],
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          {
+            "versions": [
+              "ps4"
+            ],
+            "text": "將徽章交給小太郎，固定換得；在聖之玉前交給道具店男子。",
+            "actionIds": [
+              "ps4-melon"
+            ],
+            "sourceIds": [
+              "app-melon",
+              "app-necklace"
+            ]
+          }
+        ],
+        "mapGuidance": [
+          {
+            "versions": [
+              "ps2",
+              "ps4"
+            ],
+            "status": "available",
+            "text": "回到今庄道具店；此為原創非空間互動示意，不提供比例、轉彎或距離。",
+            "routeId": "imasho-shop",
+            "stopId": "rear-man",
+            "sourceIds": [
+              "xgm-town",
+              "solo-imasho"
+            ]
+          }
+        ]
+      }
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -176,14 +512,83 @@
       "note": "已核對網頁文字，未實機驗證；繁中為本站編輯譯名。",
       "id": "necklace",
       "name": "橙色首飾",
-      "en": null,
-      "ja": "橙の首飾",
-      "aliases": ["橙の首飾り"],
+      "en": "Orange Necklace",
+      "ja": {
+        "ps2": "橙の首飾り",
+        "ps4": "橙の首飾"
+      },
+      "aliases": [
+        "橙の首飾り"
+      ],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ],
+      "detail": {
+        "explanation": [
+          {
+            "versions": ["ps2"],
+            "text": "可吸收平時看不見的漂浮紅魂；在幻魔空間無效。",
+            "sourceIds": ["xgm-gear"]
+          },
+          {
+            "versions": ["ps4"],
+            "text": "Remaster 資料記為可吸收平時看不見的漂浮紅魂；在幻魔空間無效。",
+            "sourceIds": ["app-necklace"]
+          }
+        ],
+        "thumbnailId": "thumb-necklace",
+        "acquisition": [
+          {
+            "versions": [
+              "ps2"
+            ],
+            "text": "在聖之玉後回今庄道具店與父親交談領取。PS2 資料另載須在與ジュジュドーマ對話前；Remaster 未建立此後續截止。",
+            "actionIds": [
+              "ps2-necklace"
+            ],
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          {
+            "versions": [
+              "ps4"
+            ],
+            "text": "在聖之玉後回今庄道具店與父親交談領取；Remaster 尚未建立後續截止。",
+            "actionIds": [
+              "ps4-necklace"
+            ],
+            "sourceIds": [
+              "app-melon",
+              "app-necklace"
+            ]
+          }
+        ],
+        "mapGuidance": [
+          {
+            "versions": [
+              "ps2",
+              "ps4"
+            ],
+            "status": "available",
+            "text": "回到今庄道具店；此為原創非空間互動示意，不提供比例、轉彎或距離。",
+            "routeId": "imasho-shop",
+            "stopId": "father",
+            "sourceIds": [
+              "xgm-town",
+              "solo-imasho"
+            ]
+          }
+        ]
+      }
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -195,10 +600,16 @@
       "ja": "赤い輪",
       "aliases": [],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -210,10 +621,16 @@
       "ja": "聖の玉",
       "aliases": [],
       "kind": "item",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -225,10 +642,16 @@
       "ja": null,
       "aliases": [],
       "kind": "npc",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ]
     },
     {
-      "versions": ["ps2", "ps4"],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -240,7 +663,10 @@
       "ja": null,
       "aliases": [],
       "kind": "npc",
-      "sourceIds": ["app-melon", "xgm-town"]
+      "sourceIds": [
+        "app-melon",
+        "xgm-town"
+      ]
     }
   ],
   "stages": [
@@ -267,7 +693,9 @@
   ],
   "actions": [
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -275,8 +703,13 @@
       "note": "取得紅色環後回到今庄的町道具店，與後方男子交談。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-chalk",
       "title": "向道具店後方男子領取白墨",
-      "entityIds": ["chalk", "shop-son"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "chalk",
+        "shop-son"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 1,
       "start": 1,
       "expire": 2,
@@ -293,10 +726,20 @@
       "consumption": "consumed",
       "recipient": "shop-son",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "向道具店後方男子領取"
+        },
+        {
+          "entityId": "chalk"
+        }
+      ]
     },
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -304,14 +747,22 @@
       "note": "把白墨交給安國寺惠瓊。此處僅追蹤首飾目標的前期路線，不宣稱後期送禮失效。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-heike",
       "title": "白墨 → 平家物語",
-      "entityIds": ["chalk", "heike", "ekei"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "chalk",
+        "heike",
+        "ekei"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 2,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps2-chalk"],
+      "all": [
+        "ps2-chalk"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -324,10 +775,23 @@
       "consumption": "consumed",
       "recipient": "ekei",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "chalk"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "heike"
+        }
+      ]
     },
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -335,14 +799,22 @@
       "note": "把平家物語交給雜賀孫市。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-emblem",
       "title": "平家物語 → 徽章",
-      "entityIds": ["heike", "emblem", "magoichi"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "heike",
+        "emblem",
+        "magoichi"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 3,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps2-heike"],
+      "all": [
+        "ps2-heike"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -355,10 +827,23 @@
       "consumption": "consumed",
       "recipient": "magoichi",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "heike"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "emblem"
+        }
+      ]
     },
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -366,14 +851,22 @@
       "note": "把徽章交給風魔小太郎。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-melon",
       "title": "徽章 → 哈密瓜",
-      "entityIds": ["emblem", "melon", "kotaro"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "emblem",
+        "melon",
+        "kotaro"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 4,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps2-emblem"],
+      "all": [
+        "ps2-emblem"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -386,10 +879,23 @@
       "consumption": "consumed",
       "recipient": "kotaro",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "emblem"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "melon"
+        }
+      ]
     },
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -397,14 +903,21 @@
       "note": "必須在取得聖之玉前交付；送給其他人會消耗本路線所需的哈密瓜，本站不假設能再取得。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-deliver",
       "title": "將哈密瓜交給道具店男子",
-      "entityIds": ["melon", "shop-son"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "melon",
+        "shop-son"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 5,
       "start": 1,
       "expire": 2,
       "windowKind": "hard",
       "recommendedBefore": 2,
-      "all": ["ps2-melon"],
+      "all": [
+        "ps2-melon"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -415,10 +928,23 @@
       "consumption": "consumed",
       "recipient": "shop-son",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "將"
+        },
+        {
+          "entityId": "melon"
+        },
+        {
+          "text": "交給道具店男子"
+        }
+      ]
     },
     {
-      "versions": ["ps2"],
+      "versions": [
+        "ps2"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -426,14 +952,21 @@
       "note": "取得聖之玉後，回道具店向男子的父親交談。PS2：必須在與ジュジュドーマ對話前領取。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps2-necklace",
       "title": "取得聖之玉後，向父親領取首飾",
-      "entityIds": ["necklace", "father"],
-      "sourceIds": ["xgm-town"],
+      "entityIds": [
+        "necklace",
+        "father"
+      ],
+      "sourceIds": [
+        "xgm-town"
+      ],
       "sequence": 6,
       "start": 2,
       "expire": 3,
       "windowKind": "hard",
       "recommendedBefore": null,
-      "all": ["ps2-deliver"],
+      "all": [
+        "ps2-deliver"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {},
@@ -444,10 +977,20 @@
       "consumption": "consumed",
       "recipient": "father",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "取得聖之玉後，向父親領取"
+        },
+        {
+          "entityId": "necklace"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -455,8 +998,14 @@
       "note": "取得紅色環後回到今庄的町道具店，與後方男子交談。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-chalk",
       "title": "向道具店後方男子領取白墨",
-      "entityIds": ["chalk", "shop-son"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "chalk",
+        "shop-son"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 1,
       "start": 1,
       "expire": 2,
@@ -473,10 +1022,20 @@
       "consumption": "consumed",
       "recipient": "shop-son",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "向道具店後方男子領取"
+        },
+        {
+          "entityId": "chalk"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -484,14 +1043,23 @@
       "note": "把白墨交給安國寺惠瓊。此處僅追蹤首飾目標的前期路線，不宣稱後期送禮失效。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-heike",
       "title": "白墨 → 平家物語",
-      "entityIds": ["chalk", "heike", "ekei"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "chalk",
+        "heike",
+        "ekei"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 2,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps4-chalk"],
+      "all": [
+        "ps4-chalk"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -504,10 +1072,23 @@
       "consumption": "consumed",
       "recipient": "ekei",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "chalk"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "heike"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -515,14 +1096,23 @@
       "note": "把平家物語交給雜賀孫市。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-emblem",
       "title": "平家物語 → 徽章",
-      "entityIds": ["heike", "emblem", "magoichi"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "heike",
+        "emblem",
+        "magoichi"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 3,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps4-heike"],
+      "all": [
+        "ps4-heike"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -535,10 +1125,23 @@
       "consumption": "consumed",
       "recipient": "magoichi",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "heike"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "emblem"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -546,14 +1149,23 @@
       "note": "把徽章交給風魔小太郎。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-melon",
       "title": "徽章 → 哈密瓜",
-      "entityIds": ["emblem", "melon", "kotaro"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "emblem",
+        "melon",
+        "kotaro"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 4,
       "start": 1,
       "expire": 2,
       "windowKind": "verification",
       "recommendedBefore": 2,
-      "all": ["ps4-emblem"],
+      "all": [
+        "ps4-emblem"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -566,10 +1178,23 @@
       "consumption": "consumed",
       "recipient": "kotaro",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "entityId": "emblem"
+        },
+        {
+          "text": " → "
+        },
+        {
+          "entityId": "melon"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -577,14 +1202,22 @@
       "note": "必須在取得聖之玉前交付；送給其他人會消耗本路線所需的哈密瓜，本站不假設能再取得。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-deliver",
       "title": "將哈密瓜交給道具店男子",
-      "entityIds": ["melon", "shop-son"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "melon",
+        "shop-son"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 5,
       "start": 1,
       "expire": 2,
       "windowKind": "hard",
       "recommendedBefore": 2,
-      "all": ["ps4-melon"],
+      "all": [
+        "ps4-melon"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {
@@ -595,10 +1228,23 @@
       "consumption": "consumed",
       "recipient": "shop-son",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "將"
+        },
+        {
+          "entityId": "melon"
+        },
+        {
+          "text": "交給道具店男子"
+        }
+      ]
     },
     {
-      "versions": ["ps4"],
+      "versions": [
+        "ps4"
+      ],
       "region": "JP / Remaster Japanese guide; zh-TW editorial labels",
       "confidence": "community-source",
       "status": "verified",
@@ -606,14 +1252,22 @@
       "note": "取得聖之玉後，回道具店向男子的父親交談。PS4：後續截止尚未查證；不套用 PS2 的失效規則。 來源文字已核對，未實機驗證；未記載數值門檻，不代表所有情況均無門檻。",
       "id": "ps4-necklace",
       "title": "取得聖之玉後，向父親領取首飾",
-      "entityIds": ["necklace", "father"],
-      "sourceIds": ["app-melon", "app-necklace"],
+      "entityIds": [
+        "necklace",
+        "father"
+      ],
+      "sourceIds": [
+        "app-melon",
+        "app-necklace"
+      ],
       "sequence": 6,
       "start": 2,
       "expire": 3,
       "windowKind": "verification",
       "recommendedBefore": null,
-      "all": ["ps4-deliver"],
+      "all": [
+        "ps4-deliver"
+      ],
       "any": [],
       "conflicts": [],
       "costs": {},
@@ -624,7 +1278,186 @@
       "consumption": "consumed",
       "recipient": "father",
       "companion": null,
-      "affinity": null
+      "affinity": null,
+      "titleSegments": [
+        {
+          "text": "取得聖之玉後，向父親領取"
+        },
+        {
+          "entityId": "necklace"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "id": "thumb-chalk",
+      "kind": "original-svg",
+      "path": "assets/items/chalk.svg",
+      "mime": "image/svg+xml",
+      "width": 320,
+      "height": 180,
+      "bytes": 288,
+      "sha256": "00076789836803116958f2563e7fa5501dfef52dc5bfb304c2d9040c4bcdb2fc",
+      "alt": "本站原創chalk線條示意。",
+      "caption": "本站原創示意；非遊戲截圖或官方素材。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-items",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "thumb-heike",
+      "kind": "original-svg",
+      "path": "assets/items/heike.svg",
+      "mime": "image/svg+xml",
+      "width": 320,
+      "height": 180,
+      "bytes": 318,
+      "sha256": "595751f79d3a9ebe5c4982eb812422c89ba327f7addf95f39f2f67f7c08c9f69",
+      "alt": "本站原創heike線條示意。",
+      "caption": "本站原創示意；非遊戲截圖或官方素材。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-items",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "thumb-emblem",
+      "kind": "original-svg",
+      "path": "assets/items/emblem.svg",
+      "mime": "image/svg+xml",
+      "width": 320,
+      "height": 180,
+      "bytes": 354,
+      "sha256": "c9fdf526359cb264f6666c8dc28d94fafe9b26bcadc9e93818b9d04a12a32116",
+      "alt": "本站原創emblem線條示意。",
+      "caption": "本站原創示意；非遊戲截圖或官方素材。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-items",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "thumb-melon",
+      "kind": "original-svg",
+      "path": "assets/items/melon.svg",
+      "mime": "image/svg+xml",
+      "width": 320,
+      "height": 180,
+      "bytes": 433,
+      "sha256": "cf920eafc00b57b479e7968a779f164d162eb42c8028d095ff7617e9e93d00eb",
+      "alt": "本站原創melon線條示意。",
+      "caption": "本站原創示意；非遊戲截圖或官方素材。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-items",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "thumb-necklace",
+      "kind": "original-svg",
+      "path": "assets/items/necklace.svg",
+      "mime": "image/svg+xml",
+      "width": 320,
+      "height": 180,
+      "bytes": 358,
+      "sha256": "837a5de863d2e2f58b697a6d2b7f7b98b63f948c5c91400cf957e87e5b8bb1fc",
+      "alt": "本站原創necklace線條示意。",
+      "caption": "本站原創示意；非遊戲截圖或官方素材。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-items",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "imasho-shop-route",
+      "kind": "original-svg",
+      "path": "assets/imasho-shop-route.svg",
+      "mime": "image/svg+xml",
+      "width": 640,
+      "height": 240,
+      "bytes": 684,
+      "sha256": "8b015b86306a750d69fa66acb10850e13c4ad49b1d41cd0eec13045af72e2b62",
+      "alt": "今庄道具店原創非空間互動示意。",
+      "caption": "本站原創、非比例、非官方地圖；只表達來源支持的互動關係。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-town",
+          "solo-imasho"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    },
+    {
+      "id": "chain-route",
+      "kind": "original-svg",
+      "path": "assets/chain.svg",
+      "mime": "image/svg+xml",
+      "width": 900,
+      "height": 180,
+      "bytes": 1393,
+      "sha256": "e47f44f359db9ee389b251aab060e3397d94ced4ee15fe9042153c02912c48bc",
+      "alt": "原創交換關聯示意。",
+      "caption": "本站原創關聯示意。",
+      "provenance": {
+        "type": "project-original",
+        "evidenceSourceIds": [
+          "xgm-town",
+          "app-melon"
+        ],
+        "statement": "圖形由本站依文字資料自行繪製，不重製遊戲素材。"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "imasho-shop",
+      "name": "今庄道具店互動點示意",
+      "kind": "non-spatial-schematic",
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "mediaId": "imasho-shop-route",
+      "sourceIds": [
+        "xgm-town",
+        "solo-imasho"
+      ],
+      "note": "本站原創、非比例、非官方地圖；只表達來源支持的互動點關係。",
+      "stops": [
+        {
+          "id": "rear-man",
+          "label": "道具店後方男子",
+          "entityId": "shop-son"
+        },
+        {
+          "id": "father",
+          "label": "男子的父親",
+          "entityId": "father"
+        }
+      ]
     }
   ]
 }

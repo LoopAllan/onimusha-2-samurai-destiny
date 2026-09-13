@@ -2,6 +2,8 @@ import { evaluate, applyAction } from "./engine.js";
 import { select, itemRelations, guidance } from "./query.js";
 import { validate } from "./validate.js";
 import { createProgress, initialState } from "./progress.js";
+import { createEntityLink, installEntityPreview, renderEntityDetail, renderRichText } from "./entity-ui.js";
+import { entityView, plainText } from "./entity-model.js";
 const $ = (id) => document.getElementById(id);
 const node = (tag, text, className) => {
   const e = document.createElement(tag);
@@ -43,19 +45,10 @@ async function start() {
   const scoped = () =>
     data.actions.filter((a) => a.versions.includes(state.version));
   const secondary = (e) =>
-    [e.en || "EN 名稱待核", e.ja || "JA 名稱待核"].join(" / ");
+    [e.en && typeof e.en === "object" ? e.en[state.version] : e.en || "EN 名稱待核", e.ja && typeof e.ja === "object" ? e.ja[state.version] : e.ja || "JA 名稱待核"].join(" / ");
   function entityButton(id) {
-    const e = entities.get(id);
-    const b = node("button", e.name, "entity");
-    b.type = "button";
-    b.dataset.entity = id;
-    b.append(node("small", secondary(e)));
-    b.addEventListener("click", () => {
-      selectedItem = id;
-      renderDetail();
-      $("item-detail").focus();
-    });
-    return b;
+    const view = entityView(data, id, state.version);
+    return createEntityLink(document, view);
   }
   function sourceLinks(ids, parent) {
     for (const id of ids) {
@@ -68,32 +61,15 @@ async function start() {
       parent.append(a, document.createTextNode("　"));
     }
   }
-  function renderDetail() {
+  function renderDetail({ focus = false } = {}) {
     const box = $("item-detail");
     box.replaceChildren();
-    if (!selectedItem) {
-      box.append(node("p", "尚未選擇道具。"));
-      return;
-    }
-    const e = entities.get(selectedItem);
-    box.append(node("h3", e.name), node("small", secondary(e)));
-    const related = itemRelations(scoped(), selectedItem);
-    for (const [key, label] of [
-      ["upstream", "上游取得"],
-      ["downstream", "下游用途"],
-    ]) {
-      box.append(node("h4", label));
-      const ul = node("ul");
-      for (const id of related[key]) {
-        const a = scoped().find((x) => x.id === id);
-        ul.append(node("li", a.title));
-      }
-      if (!related[key].length)
-        ul.append(node("li", "此切片尚未收錄，不代表遊戲中不存在。"));
-      box.append(ul);
-    }
-    box.append(node("p", e.note));
-    sourceLinks(e.sourceIds, box);
+    const id = selectedItem || location.hash.replace("#entity-", "");
+    if (!id || !entities.has(id)) { box.append(node("p", "尚未選擇道具。")); return; }
+    selectedItem = id;
+    const detail = renderEntityDetail(document, entityView(data, id, state.version), data);
+    box.append(detail);
+    if (focus) detail.querySelector("h3").focus();
   }
   function render() {
     $("stage").value = String(state.stage);
@@ -115,7 +91,9 @@ async function start() {
       const title = node("h3");
       title.append(
         node("span", String(a.sequence).padStart(2, "0"), "number"),
-        node("span", a.title),
+        a.titleSegments
+          ? renderRichText(document, a.titleSegments, entities)
+          : node("span", a.title),
       );
       card.append(
         title,
@@ -212,6 +190,11 @@ async function start() {
       ? "已儲存於此瀏覽器，僅適用目前版本。"
       : "瀏覽器無法儲存；目前只保留於本頁，重新整理會遺失。";
   }
+  installEntityPreview(document, (id) => entityView(data, id, state.version));
+  window.addEventListener("hashchange", () => {
+    selectedItem = location.hash.replace("#entity-", "");
+    renderDetail({ focus: true });
+  });
   for (const [i, stage] of data.stages.entries()) {
     for (const id of ["stage", "stage-filter"]) {
       const option = node("option", stage.name);

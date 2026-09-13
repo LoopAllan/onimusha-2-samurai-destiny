@@ -62,8 +62,18 @@ try {
   assert.equal(await page.locator("nav a").count(), 8);
   assert.match(
     await page.locator('[data-entity="chalk"] small').first().innerText(),
-    /EN 名稱待核/,
+    /Chalk/,
   );
+  const chalkLink = page.locator('[data-entity="chalk"]').first();
+  assert.equal(await chalkLink.getAttribute("href"), "companions.html#entity-chalk");
+  await chalkLink.focus();
+  await page.waitForSelector('[role="tooltip"]:not([hidden])');
+  assert.equal(await chalkLink.getAttribute("aria-describedby"), "entity-tooltip");
+  assert.equal(await page.locator('[role="tooltip"] img').count(), 1);
+  assert.equal(await page.locator('[role="tooltip"] img').getAttribute("src"), "./assets/items/chalk.svg");
+  await page.keyboard.press("Escape");
+  assert.equal(await chalkLink.getAttribute("aria-describedby"), null);
+  assert.equal(await page.locator('[role="tooltip"]').count(), 1);
   let skippedWarnings = 0;
   const dismissAdvance = async (dialog) => {
     skippedWarnings++;
@@ -112,8 +122,9 @@ try {
   assert.equal(await page.locator("#chain article").count(), 5);
   await page.selectOption("#stage-filter", "");
   await page.locator('[data-entity="melon"]').first().click();
-  assert.match(await page.locator("#item-detail").innerText(), /上游取得/);
-  assert.match(await page.locator("#item-detail").innerText(), /下游用途/);
+  await page.waitForSelector("#entity-melon");
+  assert.match(await page.locator("#item-detail").innerText(), /Cantaloupe/);
+  assert.match(await page.locator("#item-detail").innerText(), /原創非空間互動示意/);
   await page.evaluate(() => localStorage.setItem("other-app", "keep"));
   page.once("dialog", (d) => d.accept());
   await page.locator("#reset").click();

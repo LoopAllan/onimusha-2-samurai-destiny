@@ -1,4 +1,5 @@
 import { evaluate } from "./engine.js";
+import { plainText } from "./entity-model.js";
 export function select(
   records,
   entities,
@@ -17,7 +18,7 @@ export function select(
               record.windowKind === "verification"))) &&
         (!recipient || record.recipient === recipient) &&
         [
-          record.title,
+          plainText(record.titleSegments ?? record.title, new Map(entities.map((entity) => [entity.id, entity]))),
           ...record.entityIds.flatMap((id) => {
             const e = entities.find((x) => x.id === id);
             return e ? [e.name, e.en, e.ja, ...e.aliases] : [];
