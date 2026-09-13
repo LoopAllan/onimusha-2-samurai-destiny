@@ -25,7 +25,7 @@ Open `http://localhost:8080/`. `file://` does not support this JSON-loading work
 - Stage/recipient filters and multilingual alias search; ordered steps; direct item upstream/downstream links; current actions and pre-advance warnings.
 - One-way local stage progress with confirmation of risky advances, exchange consumption, per-version persistence, and reset limited to `onimusha2-guide:v1:<version>`. This notebook does not modify or synchronize the game's save. Users record actions only after completing them in game; it is not a simulator of NPC whereabouts.
 - Necessary guidance stays visible. Story-tagged records are excluded from search/render unless opted in; this release contains no story-result records. Broad source excerpts are never indexed or shipped.
-- Original relationship SVG with equivalent text. Official CAPCOM character video link is promotional introduction, **not a verified walkthrough**. No copied map, screenshot, transcript, or remote image is redistributed.
+- Original relationship SVG with equivalent text. The five illustrated entity details use only registered, local **original SVG pictograms**; each carries a byte/hash/provenance record and is loaded as an image, never injected markup. The Imasho figure is explicitly a non-spatial interaction schematic, not a map. Official CAPCOM character video link is promotional introduction, **not a verified walkthrough**. No copied map, screenshot, transcript, or remote image is redistributed.
 
 ### Evidence semantics
 

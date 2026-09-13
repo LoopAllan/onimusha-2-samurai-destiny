@@ -8,8 +8,10 @@ export function validate(data) {
   if (!object(data)) return ["data: expected object"];
   for (const key of ["sources", "entities", "actions", "stages"])
     if (!Array.isArray(data[key])) fail(key, "expected array");
+  for (const key of ["media", "routes"])
+    if (data[key] !== undefined && !Array.isArray(data[key])) fail(key, "expected array");
   const maps = {};
-  for (const key of ["sources", "entities", "actions", "stages"]) {
+  for (const key of ["sources", "entities", "actions", "stages", "media", "routes"]) {
     maps[key] = new Map();
     for (const r of list(data[key])) {
       if (!object(r) || !/^[a-z][a-z0-9-]*$/.test(r.id)) {
@@ -92,8 +94,39 @@ export function validate(data) {
     )
       fail(e.id, "malformed names");
     for (const k of ["en", "ja"])
-      if (e[k] !== null && typeof e[k] !== "string")
+      if (
+        e[k] !== null &&
+        typeof e[k] !== "string" &&
+        (!object(e[k]) || Object.values(e[k]).some((v) => typeof v !== "string"))
+      )
         fail(e.id, `malformed ${k}`);
+    if (["chalk", "heike", "emblem", "melon", "necklace"].includes(e.id) && e.detail === undefined)
+      fail(e.id, "missing illustrated detail");
+    if (e.detail !== undefined) {
+      if (!object(e.detail) || !maps.media.has(e.detail.thumbnailId)) fail(e.id, "invalid detail thumbnail");
+      const textRecord = (record) => object(record) && typeof record.text === "string" && Array.isArray(record.sourceIds) && record.sourceIds.length;
+      const versionedTextRecord = (record) => textRecord(record) && Array.isArray(record.versions) && record.versions.length && record.versions.every((version) => versions.includes(version));
+      const detailTextRecords = Array.isArray(e.detail.explanation) ? e.detail.explanation : [e.detail.explanation];
+      if (!detailTextRecords.length || detailTextRecords.some((entry) => !textRecord(entry))) fail(e.id, "invalid detail explanation");
+      const covered = new Set();
+      for (const entry of detailTextRecords) {
+        const entryVersions = entry.versions ?? e.versions;
+        if (entry.versions !== undefined && !versionedTextRecord(entry)) fail(e.id, "invalid explanation versions");
+        for (const sourceId of list(entry.sourceIds)) ref({ ...e, versions: entryVersions }, sourceId, "sources");
+        for (const version of entryVersions) {
+          covered.add(version);
+          if (!list(entry.sourceIds).some((id) => list(maps.sources.get(id)?.versions).includes(version))) fail(e.id, "source version coverage missing");
+        }
+      }
+      if (list(e.versions).some((version) => !covered.has(version))) fail(e.id, "explanation version coverage missing");
+      for (const entry of [...list(e.detail.acquisition), ...list(e.detail.mapGuidance)]) {
+        if (!versionedTextRecord(entry)) fail(e.id, "invalid detail entry");
+        for (const sourceId of list(entry.sourceIds)) ref({ ...e, versions: entry.versions }, sourceId, "sources");
+        for (const version of list(entry.versions)) if (!list(entry.sourceIds).some((id) => list(maps.sources.get(id)?.versions).includes(version))) fail(e.id, "source version coverage missing");
+        if (entry.status === "available") { if (!maps.routes.has(entry.routeId)) fail(e.id, "unknown route"); }
+        else if (entry.status !== undefined && entry.status !== "not-established") fail(e.id, "invalid map status");
+      }
+    }
   }
   for (const a of maps.actions.values()) {
     if (typeof a.title !== "string" || !a.title.trim())
