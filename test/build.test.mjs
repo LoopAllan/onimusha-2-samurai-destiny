@@ -29,3 +29,14 @@ test("CI installs Chromium before the complete test suite", () => {
   assert.ok(testSuite >= 0, "CI runs the complete test suite");
   assert.ok(install < testSuite, "Chromium must be ready before npm test");
 });
+
+test("Pages deploys after a main merge with Chromium ready for tests", () => {
+  const workflow = readFileSync(".github/workflows/pages.yml", "utf8");
+  const mainPush = workflow.indexOf("push:\n    branches: [main]");
+  const manualOnly = workflow.indexOf("workflow_dispatch:");
+  const install = workflow.indexOf("npx playwright install --with-deps chromium");
+  const testSuite = workflow.indexOf("- run: npm test");
+  assert.ok(mainPush >= 0, "Pages workflow deploys on main push");
+  assert.equal(manualOnly, -1, "Pages workflow no longer requires manual dispatch");
+  assert.ok(install >= 0 && install < testSuite, "Chromium is ready before tests");
+});
