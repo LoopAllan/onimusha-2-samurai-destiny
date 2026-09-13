@@ -12,7 +12,9 @@ export function select(
         (!record.story || spoilers) &&
         (stage === undefined ||
           (record.start <= stage &&
-            (record.expire === null || stage < record.expire))) &&
+            (record.expire === null ||
+              stage < record.expire ||
+              record.windowKind === "verification"))) &&
         (!recipient || record.recipient === recipient) &&
         [
           record.title,

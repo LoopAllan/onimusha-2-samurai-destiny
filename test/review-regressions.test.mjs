@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { guidance } from "../src/query.js";
+import { guidance, select } from "../src/query.js";
 import { validate } from "../src/validate.js";
 import { initialState } from "../src/progress.js";
 const corpus = JSON.parse(
@@ -35,6 +35,32 @@ test("advance warnings cover every crossed checkpoint, not only the next one", (
   state.stage = 2;
   assert.equal(guidance(corpus.actions, state, 2).before.length, 0);
   assert.equal(guidance(corpus.actions, state, 1).before.length, 0);
+});
+
+test("source-bounded exchanges stay visible as unknown rather than inheriting a hard expiry", () => {
+  const ids = [
+    "ps2-heike",
+    "ps2-emblem",
+    "ps2-melon",
+    "ps4-heike",
+    "ps4-emblem",
+    "ps4-melon",
+    "ps4-necklace",
+  ];
+  for (const id of ids) {
+    const action = corpus.actions.find((record) => record.id === id);
+    assert.equal(
+      action.windowKind,
+      "verification",
+      `${id} must remain source-bounded`,
+    );
+  }
+  const afterOrb = select(corpus.actions, corpus.entities, {
+    version: "ps4",
+    stage: 2,
+  }).map((action) => action.id);
+  assert.ok(afterOrb.includes("ps4-heike"));
+  assert.ok(afterOrb.includes("ps4-necklace"));
 });
 
 test("publishing validator rejects missing display and window semantics with field errors", () => {
