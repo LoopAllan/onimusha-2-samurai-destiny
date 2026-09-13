@@ -1,6 +1,6 @@
 # Onimusha 2 · 旅途手帖
 
-A source-backed, Traditional Chinese static guide slice for **Onimusha 2: Samurai's Destiny**. Specification: [issue #1](https://github.com/LoopAllan/onimusha-2-samurai-destiny/issues/1). This is one operational slice, **not** a complete early-game walkthrough.
+A source-backed, Traditional Chinese static guide for **Onimusha 2: Samurai's Destiny**. Specification: [issue #1](https://github.com/LoopAllan/onimusha-2-samurai-destiny/issues/1). The published walkthrough currently covers the opening Yagyu Village slice only, not the complete game.
 
 ## Run and verify
 
@@ -21,6 +21,8 @@ Open `http://localhost:8080/`. `file://` does not support this JSON-loading work
 ## Delivered scope
 
 - Eight independently addressable category pages with normal relative links, one shared navigation/header/version shell, active-page semantics, responsive layout, and keyboard/touch navigation.
+- Five-step opening walkthrough from Yagyu Village through the Buraitou departure to Imasho, with claim-level citations, an explicit leave-area checkpoint, and PS2/2025 Remaster projections.
+- Nineteen opening-area names with per-version Traditional Chinese, English, and Japanese evidence states. Editorial translations and missing target-version names render as such instead of inheriting another version.
 - Six-step chalk → Heike → emblem → melon → delivery → necklace route, with **separate version-specific action records** and inspected community-source provenance.
 - Stage/recipient filters and multilingual alias search; ordered steps; direct item upstream/downstream links; current actions and pre-advance warnings.
 - One-way local stage progress with confirmation of risky advances, exchange consumption, per-version persistence, and reset limited to `onimusha2-guide:v1:<version>`. This notebook does not modify or synchronize the game's save. Users record actions only after completing them in game; it is not a simulator of NPC whereabouts.
@@ -29,7 +31,7 @@ Open `http://localhost:8080/`. `file://` does not support this JSON-loading work
 
 ### Evidence semantics
 
-`status: verified` means **the source text was inspected**, not official certification, cross-source numerical certainty, or a playtest. All community route records remain `confidence: community-source` and explicitly say they were not playtested. Names in Chinese are editorial translations; missing EN/JA names remain null and visibly pending. Exact per-version sources are shown on actions and entity details. No item English names were inferred from a translation.
+Legacy `status: verified` records mean **the source text was inspected**, not official certification, cross-source numerical certainty, or a playtest. New walkthrough steps use the narrower `source-checked` status. Name records distinguish `in-game-verified`, `source-listed`, `editorial`, and `pending` independently for each language/version. Traditional Chinese opening names remain editorial until target-version UI evidence is captured; Remaster Japanese names remain pending rather than inheriting PS2 terminology.
 
 `start` is inclusive and `expire` exclusive over editorial event checkpoints, not official chapter numbers. `windowKind` is mandatory: `hard` is an evidenced cutoff, while `verification` ends the **researched operating window**, returning unknown rather than claiming the game action expires. Null bounds remain an explicit unknown, disable completion and render safely; a null recipient means no recipient filter entry. This distinction matters for intermediate trades and the PS4 necklace collection after the later dialogue. Recommended completion deadlines do not become universal gifting deadlines. Advances across multiple checkpoints warn about every crossed pending deadline, not only the next checkpoint.
 
@@ -37,13 +39,15 @@ The PS2 town guide supports the necklace deadline before speaking to ジュジ�
 
 ### Architecture and rule boundary
 
-- `data/guide.json`: normalized entities, sources, stages and actions.
+- `data/guide.json`: normalized entities, sources, stages, actions and walkthrough steps.
 - `src/validate.js`: input shape, source URLs, referential integrity, source coverage, graph cycles, quantities and rule-field validation.
 - `src/engine.js`: pure eligibility and immutable transactions.
 - `src/query.js`: scoped search, stable order, derived reverse relations and warnings.
 - `src/progress.js`: injected storage adapter and scoped persistence.
 - `src/shell.js`: shared version preference and responsive navigation behavior on every page.
 - `src/app.js`: companions-only safe DOM rendering and interaction orchestration; no `innerHTML`.
+- `src/walkthrough-model.js`: pure version projection for ordered steps, localized names and source records.
+- `src/walkthrough-app.js`: walkthrough-only safe DOM rendering; no `innerHTML`.
 - `scripts/site.mjs`: shared page/navigation configuration and HTML generator.
 - `scripts/`: validation, allowlisted eight-document static build and real browser smoke test.
 
@@ -56,6 +60,10 @@ Engine tests additionally cover AND/OR event conditions, inventory, companion/af
 - [CAPCOM EN](https://www.capcom-games.com/onimusha/2/en-uk/) / [JA](https://www.capcom-games.com/onimusha/2/ja-jp/): official names, version notes, linked promotional video. These pages describe both the original and remaster; they do not establish all shared mechanics.
 - [AppMedia melon route](https://appmedia.jp/onimusha2/78917888) and [orange necklace](https://appmedia.jp/onimusha2/78919586): Remaster route, acquisition and delivery windows. These are two pages from **one publisher**, not independent cross-verification.
 - [XGameMania town, notes 10 and 17](https://xgamemania.com/onimusha/2/map/2.html): PS2 chain, delivery and collection windows.
+- [SoloPlayGuide Yagyu Village](https://soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/01-yagyu-village-1st-visit): Remaster opening route and English in-game acquisition screenshots.
+- [GameChronicles Yagyu Village](https://gamechronicles.com/guides/onimusha2/oni2guide.htm): PS2 opening route. Its conflicting map label is not used as name evidence.
+- [XGameMania Yagyu Village](https://xgamemania.com/onimusha/2/map/1.html), [key items](https://xgamemania.com/onimusha/2/item3.html), [items](https://xgamemania.com/onimusha/2/item.html), and [documents](https://xgamemania.com/onimusha/2/item4.html): PS2 Japanese names and opening-area locations.
+- [GameFAQs Gift Item FAQ, archived 2025-04-29](https://web.archive.org/web/20250429020303/https://gamefaqs.gamespot.com/ps2/520511-onimusha-2-samurais-destiny/faqs/17422): PS2 English/Japanese item terminology; cited as an archive replay because the live page was blocked.
 
 Inspected 2026-09-13. AppMedia's necklace page spells one step `エンブレス`, while its next step and melon article consistently use `エンブレム`; the registry follows the consistent name and does not invent a second item. The PS2 town page has a truncated phrase for the sick father; our original summary does not reproduce the typo. Source excerpts used for research are not included in the site or protected search. Agreement across editions is not same-edition corroboration.
 
@@ -63,6 +71,6 @@ Inspected 2026-09-13. AppMedia's necklace page spells one step `エンブレス`
 
 PR/main CI runs tests, data validation, build and browser checks, then uploads a **non-deployment** downloadable build artifact. Actions use major version tags as requested.
 
-No deployment has been performed. `pages.yml` is manual-only (`workflow_dispatch`) and refuses non-main refs. It rebuilds/tests before deployment and scopes Pages/OIDC permissions to the deployment job. After an approved merge **and separate release approval**, a repository owner must enable Pages with GitHub Actions and explicitly run this workflow on `main`. Configure approval protection for the `github-pages` environment as appropriate. No PR, branch push, or merge automatically publishes a site.
+The public site is <https://loopallan.github.io/onimusha-2-samurai-destiny/>. A push to `main` automatically deploys through `pages.yml`; pull requests do not deploy. The workflow rebuilds and tests before upload, and scopes Pages/OIDC permissions to the deployment job.
 
-Local execution is not remote CI success or a live Pages URL. Implementation is delivered on a feature branch through an independently reviewed pull request. Issue #1 remains the authoritative specification and progress record; merge and public deployment require separate approval.
+Local execution is not remote CI or deployment success. Implementation is delivered on a feature branch through an independently reviewed pull request; after merge, the exact `main` Pages run and public URLs must be verified. Issue #1 remains the authoritative specification and progress record.

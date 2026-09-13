@@ -124,7 +124,6 @@ test("multipage build contract", async (t) => {
     }
     assert.doesNotMatch(byKey.get("home"), /id="(?:chain|inventory|stage)"/);
     for (const key of [
-      "walkthrough",
       "collectibles",
       "equipment",
       "maps",
@@ -133,6 +132,8 @@ test("multipage build contract", async (t) => {
     ]) {
       assert.match(byKey.get(key), /data-status="research-in-progress"/);
     }
+    assert.match(byKey.get("walkthrough"), /data-status="published-slice"/);
+    assert.match(byKey.get("walkthrough"), /id="walkthrough-root"/);
     const headings = documents.map(([, , html]) =>
       html.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1].replace(/<[^>]+>/g, "").trim(),
     );

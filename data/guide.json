@@ -73,6 +73,115 @@
       "versions": [
         "ps4"
       ]
+    },
+    {
+      "id": "solo-yagyu-opening",
+      "title": "Yagyu Village (1st Visit) — Onimusha 2 Remaster",
+      "url": "https://soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/01-yagyu-village-1st-visit",
+      "versions": [
+        "ps4"
+      ],
+      "sourceType": "community-walkthrough-with-gameplay-screenshots",
+      "region": "2025 Remaster, English UI",
+      "accessedAt": "2026-09-13",
+      "support": "Opening route, pickup locations, and visible English acquisition labels in screenshots 004–020. The Buraitou label is page prose, not visible in screenshot 022."
+    },
+    {
+      "id": "gamechronicles-yagyu",
+      "title": "Onimusha 2 Walkthrough v1.0 — Yagyu Village",
+      "url": "https://gamechronicles.com/guides/onimusha2/oni2guide.htm",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-walkthrough",
+      "region": "PS2, English localization",
+      "accessedAt": "2026-09-13",
+      "support": "Opening route, pickup sequence, residence checklist, and departure via the shrine. Its 'Imasho Town Map' wording conflicts with the Japanese map/document index and is not used as name evidence."
+    },
+    {
+      "id": "ign-yagyu-act-1",
+      "title": "Walkthrough: Act 1 — Jubei's Village",
+      "url": "https://www.ign.com/wikis/onimusha-2-samurais-destiny/Walkthrough:_Act_1",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-walkthrough-and-item-index",
+      "region": "PS2, English localization",
+      "accessedAt": "2026-09-13",
+      "support": "PS2 opening route and English item terminology. It calls the opening orb 'First Orb of Power' and the document 'Onimusha Scroll', conflicting with GameChronicles; neither disputed name is selected."
+    },
+    {
+      "id": "xgm-yagyu-map",
+      "title": "鬼武者2 攻略情報サイト — 柳生の庄",
+      "url": "https://xgamemania.com/onimusha/2/map/1.html",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-map-and-location-index",
+      "region": "PS2, Japanese release",
+      "accessedAt": "2026-09-13",
+      "support": "Japanese area/location terminology and numbered pickup positions for the opening area."
+    },
+    {
+      "id": "xgm-key-items",
+      "title": "鬼武者2 攻略情報サイト — 重要アイテム",
+      "url": "https://xgamemania.com/onimusha/2/item3.html",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-item-index",
+      "region": "PS2, Japanese release",
+      "accessedAt": "2026-09-13",
+      "support": "Japanese key-item names and locations, including 仁の玉 in 柳生の庄."
+    },
+    {
+      "id": "xgm-opening-items",
+      "title": "鬼武者2 攻略情報サイト — 回復／強化アイテム",
+      "url": "https://xgamemania.com/onimusha/2/item.html",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-item-index",
+      "region": "PS2, Japanese release",
+      "accessedAt": "2026-09-13",
+      "support": "Japanese consumable and permanent-upgrade names."
+    },
+    {
+      "id": "xgm-opening-documents",
+      "title": "鬼武者2 攻略情報サイト — 書物",
+      "url": "https://xgamemania.com/onimusha/2/item4.html",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "community-document-index",
+      "region": "PS2, Japanese release",
+      "accessedAt": "2026-09-13",
+      "support": "Japanese document names and opening-area locations, including 鬼武者の書 and 柳生の庄の地図."
+    },
+    {
+      "id": "gamefaqs-17422-archive",
+      "title": "Onimusha 2: Samurai's Destiny — Gift Item FAQ",
+      "url": "https://web.archive.org/web/20250429020303/https://gamefaqs.gamespot.com/ps2/520511-onimusha-2-samurais-destiny/faqs/17422",
+      "canonicalUrl": "https://gamefaqs.gamespot.com/ps2/520511-onimusha-2-samurais-destiny/faqs/17422",
+      "versions": [
+        "ps2"
+      ],
+      "sourceType": "archived-community-bilingual-item-index",
+      "region": "PS2, English and Japanese terminology",
+      "accessedAt": "2026-09-13",
+      "support": "Bilingual PS2 item terminology. Accessed through the dated Wayback replay because the live page returned a bot challenge."
+    },
+    {
+      "id": "remaster-opening-video",
+      "title": "Onimusha 2: Samurai's Destiny Remaster walkthrough part 1 — YouTube",
+      "url": "https://www.youtube.com/watch?v=3murTLtgyyU&t=1730s",
+      "versions": [
+        "ps4"
+      ],
+      "sourceType": "community-gameplay-video",
+      "region": "2025 Remaster, English UI",
+      "accessedAt": "2026-09-13",
+      "support": "Direct gameplay footage: Buraitou is acquired at 28:50 and the Imasho arrival sequence begins at 29:43."
     }
   ],
   "entities": [
@@ -206,14 +315,23 @@
       "detail": {
         "explanation": [
           {
-            "versions": ["ps2"],
+            "versions": [
+              "ps2"
+            ],
             "text": "石灰岩碎塊，可在板或石頭上書寫。",
-            "sourceIds": ["gf-gifts", "xgm-items"]
+            "sourceIds": [
+              "gf-gifts",
+              "xgm-items"
+            ]
           },
           {
-            "versions": ["ps4"],
+            "versions": [
+              "ps4"
+            ],
             "text": "Remaster 交換鏈中，在今庄道具店取得的回禮道具；更詳細的道具說明文字待核。",
-            "sourceIds": ["app-melon"]
+            "sourceIds": [
+              "app-melon"
+            ]
           }
         ],
         "thumbnailId": "thumb-chalk",
@@ -285,14 +403,23 @@
       "detail": {
         "explanation": [
           {
-            "versions": ["ps2"],
+            "versions": [
+              "ps2"
+            ],
             "text": "描述平氏與源氏之戰及平氏滅亡的故事，與琵琶法師相關。",
-            "sourceIds": ["gf-gifts", "xgm-items"]
+            "sourceIds": [
+              "gf-gifts",
+              "xgm-items"
+            ]
           },
           {
-            "versions": ["ps4"],
+            "versions": [
+              "ps4"
+            ],
             "text": "Remaster 交換鏈中，將白墨交給惠瓊後取得；更詳細的道具說明文字待核。",
-            "sourceIds": ["app-melon"]
+            "sourceIds": [
+              "app-melon"
+            ]
           }
         ],
         "thumbnailId": "thumb-heike",
@@ -362,14 +489,23 @@
       "detail": {
         "explanation": [
           {
-            "versions": ["ps2"],
+            "versions": [
+              "ps2"
+            ],
             "text": "西班牙海軍的銀色徽章，據述由王族贈與。",
-            "sourceIds": ["gf-gifts", "xgm-items"]
+            "sourceIds": [
+              "gf-gifts",
+              "xgm-items"
+            ]
           },
           {
-            "versions": ["ps4"],
+            "versions": [
+              "ps4"
+            ],
             "text": "Remaster 交換鏈中，將平家物語交給孫市後取得；更詳細的道具說明文字待核。",
-            "sourceIds": ["app-melon"]
+            "sourceIds": [
+              "app-melon"
+            ]
           }
         ],
         "thumbnailId": "thumb-emblem",
@@ -444,14 +580,23 @@
       "detail": {
         "explanation": [
           {
-            "versions": ["ps2"],
+            "versions": [
+              "ps2"
+            ],
             "text": "PS2 資料稱西班牙的綠色水果，汁多而甜；日文資料另稱以桐箱盛裝的高級品。",
-            "sourceIds": ["gf-gifts", "xgm-items"]
+            "sourceIds": [
+              "gf-gifts",
+              "xgm-items"
+            ]
           },
           {
-            "versions": ["ps4"],
+            "versions": [
+              "ps4"
+            ],
             "text": "Remaster 交換鏈中，將徽章交給小太郎後可取得；更詳細的道具說明文字待核。",
-            "sourceIds": ["app-melon"]
+            "sourceIds": [
+              "app-melon"
+            ]
           }
         ],
         "thumbnailId": "thumb-melon",
@@ -528,14 +673,22 @@
       "detail": {
         "explanation": [
           {
-            "versions": ["ps2"],
+            "versions": [
+              "ps2"
+            ],
             "text": "可吸收平時看不見的漂浮紅魂；在幻魔空間無效。",
-            "sourceIds": ["xgm-gear"]
+            "sourceIds": [
+              "xgm-gear"
+            ]
           },
           {
-            "versions": ["ps4"],
+            "versions": [
+              "ps4"
+            ],
             "text": "Remaster 資料記為可吸收平時看不見的漂浮紅魂；在幻魔空間無效。",
-            "sourceIds": ["app-necklace"]
+            "sourceIds": [
+              "app-necklace"
+            ]
           }
         ],
         "thumbnailId": "thumb-necklace",
@@ -666,6 +819,1250 @@
       "sourceIds": [
         "app-melon",
         "xgm-town"
+      ]
+    },
+    {
+      "id": "yagyu-village",
+      "name": "柳生之庄",
+      "type": "place",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "柳生之庄",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "柳生之庄",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Yagyu's Village",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Yagyu village",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "柳生の庄",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-yagyu-map"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "xgm-yagyu-map"
+      ]
+    },
+    {
+      "id": "yagyu-village-map",
+      "name": "柳生之庄地圖",
+      "type": "document",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "柳生之庄地圖",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "柳生之庄地圖",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Map of the Yagyu Village",
+            "status": "source-listed",
+            "sourceIds": [
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Yagyu Village Map",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "柳生の庄の地図",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-documents"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "ign-yagyu-act-1",
+        "xgm-opening-documents"
+      ]
+    },
+    {
+      "id": "herb",
+      "name": "藥草",
+      "type": "consumable",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "藥草",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "藥草",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Herb",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Herb",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "薬草",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-items"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "xgm-opening-items"
+      ]
+    },
+    {
+      "id": "frog",
+      "name": "青蛙",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "青蛙",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "青蛙",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Frog",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Frog",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "カエル",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "takajo",
+      "name": "高女",
+      "type": "character",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "高女",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "高女",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Takajo",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Takajo",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "高女",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-key-items"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "xgm-key-items"
+      ]
+    },
+    {
+      "id": "charity-orb",
+      "name": "仁之玉",
+      "type": "key",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "仁之玉",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "仁之玉",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": null,
+            "status": "conflicting",
+            "sourceIds": [
+              "gamechronicles-yagyu",
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Charity Orb",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "仁の玉",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-key-items"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamechronicles-yagyu",
+        "ign-yagyu-act-1",
+        "xgm-key-items"
+      ]
+    },
+    {
+      "id": "play-instructions",
+      "name": "遊玩說明",
+      "type": "document",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "遊玩說明",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "遊玩說明",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": null,
+            "status": "conflicting",
+            "sourceIds": [
+              "gamechronicles-yagyu",
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Play Instructions",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "鬼武者の書",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-documents"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamechronicles-yagyu",
+        "ign-yagyu-act-1",
+        "xgm-opening-documents"
+      ]
+    },
+    {
+      "id": "yagyu-residence",
+      "name": "柳生陣屋",
+      "type": "place",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "柳生陣屋",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "柳生陣屋",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Yagyu's House",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Yagyu residence",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "xgm-yagyu-map"
+      ]
+    },
+    {
+      "id": "abacus",
+      "name": "算盤",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "算盤",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "算盤",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Abacus",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Abacus",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "そろばん",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "kaleidoscope",
+      "name": "萬花筒",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "萬花筒",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "萬花筒",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Kaleidoscope",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Kaleidoscope",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "万華鏡",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "power-jewel",
+      "name": "力石",
+      "type": "upgrade",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "力石",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "力石",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": null,
+            "status": "conflicting",
+            "sourceIds": [
+              "gamefaqs-17422-archive",
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Power Jewel",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "力石",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-items"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "ign-yagyu-act-1",
+        "xgm-opening-items"
+      ]
+    },
+    {
+      "id": "artwork-10",
+      "name": "美人畫 #10",
+      "type": "collectible",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "美人畫 #10",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "美人畫 #10",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "Artwork #10",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "xgm-yagyu-map"
+      ]
+    },
+    {
+      "id": "four-guardians-right",
+      "name": "四神圖（右）",
+      "type": "document",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "四神圖（右）",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "四神圖（右）",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Right Half of the Four Gods Map",
+            "status": "source-listed",
+            "sourceIds": [
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Four Guardians: Right",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "四神図（右）",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-documents"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "ign-yagyu-act-1",
+        "xgm-opening-documents"
+      ]
+    },
+    {
+      "id": "fork",
+      "name": "叉子",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "叉子",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "叉子",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Fork",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Fork",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "フォーク",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "oolong-tea",
+      "name": "烏龍茶",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "烏龍茶",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "烏龍茶",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Oolong Tea",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Oolong Tea",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "烏龍茶",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "four-guardians-left",
+      "name": "四神圖（左）",
+      "type": "document",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "四神圖（左）",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "四神圖（左）",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Left Half of the Four Gods Map",
+            "status": "source-listed",
+            "sourceIds": [
+              "ign-yagyu-act-1"
+            ]
+          },
+          "ps4": {
+            "text": "Four Guardians: Left",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "四神図（左）",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-opening-documents"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "ign-yagyu-act-1",
+        "xgm-opening-documents"
+      ]
+    },
+    {
+      "id": "wasabi",
+      "name": "山葵",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "山葵",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "山葵",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Wasabi",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Wasabi",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "わさび",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "dragon-shrine",
+      "name": "龍之祠",
+      "type": "place",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "龍之祠",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "龍之祠",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Thunder Dragon Shrine",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Dragon Shrine",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamechronicles-yagyu",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "buraitou",
+      "name": "舞雷刀",
+      "type": "weapon",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "舞雷刀",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "舞雷刀",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Buraitou",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Buraitou",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-yagyu-opening"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "舞雷刀",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese and 2025 Remaster English evidence; Traditional Chinese and Remaster Japanese names are not established",
+      "confidence": "mixed by language and version; see names evidence status",
+      "note": "Source-checked record only. The top-level verified status does not mean official approval or target-version in-game verification for every localized name.",
+      "verifiedAt": "2026-09-13",
+      "sourceIds": [
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive"
       ]
     }
   ],
@@ -1456,6 +2853,266 @@
           "id": "father",
           "label": "男子的父親",
           "entityId": "father"
+        }
+      ]
+    }
+  ],
+  "walkthroughSteps": [
+    {
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "柳生之庄／Yagyu Village／柳生の庄",
+      "status": "source-checked",
+      "confidence": "medium-high",
+      "verifiedAt": "2026-09-13",
+      "id": "yagyu-village-path",
+      "sequence": 10,
+      "kind": "required",
+      "title": "穿過村落與橋區",
+      "summary": "沿開場唯一通路前進，先清理橋區敵人並拿地圖。",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-yagyu-opening",
+        "xgm-yagyu-map",
+        "xgm-opening-documents"
+      ],
+      "entityIds": [
+        "yagyu-village",
+        "yagyu-village-map"
+      ],
+      "instructions": [
+        {
+          "text": "沿村落通路下階梯，擊倒擋路敵人後穿過城門。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening"
+          ]
+        },
+        {
+          "text": "清除橋前後的敵人；橋左側寶箱可取得柳生之庄地圖。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-yagyu-map",
+            "xgm-opening-documents"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "柳生之庄／Yagyu Village／柳生の庄",
+      "status": "source-checked",
+      "confidence": "medium-high",
+      "verifiedAt": "2026-09-13",
+      "id": "yagyu-pond-pickups",
+      "sequence": 20,
+      "kind": "optional",
+      "title": "湖邊先拿藥草與青蛙",
+      "summary": "進洞前完成湖邊兩項可拾取物。",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-yagyu-opening",
+        "xgm-yagyu-map",
+        "xgm-opening-items",
+        "gamefaqs-17422-archive"
+      ],
+      "entityIds": [
+        "herb",
+        "frog"
+      ],
+      "instructions": [
+        {
+          "text": "湖邊右側樹木後方的寶箱可取得藥草。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-yagyu-map",
+            "xgm-opening-items"
+          ]
+        },
+        {
+          "text": "沿湖的另一側路徑拾取青蛙，再踩過升起的石塊進入洞窟。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-yagyu-map",
+            "gamefaqs-17422-archive"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "柳生之庄／Yagyu Village／柳生の庄",
+      "status": "source-checked",
+      "confidence": "medium-high",
+      "verifiedAt": "2026-09-13",
+      "id": "yagyu-meet-takajo",
+      "sequence": 30,
+      "kind": "required",
+      "title": "穿過洞窟與高女會面",
+      "summary": "完成事件，取得仁之玉與遊玩說明，再拿門旁藥草。",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-yagyu-opening",
+        "xgm-yagyu-map",
+        "xgm-key-items",
+        "xgm-opening-documents",
+        "xgm-opening-items"
+      ],
+      "entityIds": [
+        "takajo",
+        "charity-orb",
+        "play-instructions",
+        "herb"
+      ],
+      "instructions": [
+        {
+          "text": "穿過洞窟並由另一端出口觸發與高女會面的事件。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-yagyu-map"
+          ]
+        },
+        {
+          "text": "事件結束後取得仁之玉與遊玩說明；出口門旁另有一份藥草。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-key-items",
+            "xgm-opening-documents",
+            "xgm-opening-items"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "柳生之庄／Yagyu Village／柳生の庄",
+      "status": "source-checked",
+      "confidence": "medium-high",
+      "verifiedAt": "2026-09-13",
+      "id": "yagyu-residence-checklist",
+      "sequence": 40,
+      "kind": "optional",
+      "missable": false,
+      "title": "啟動祠堂前搜完柳生陣屋",
+      "summary": "祠堂會帶你離開此區；先回出生點旁住所完成本輪收集。",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-yagyu-opening",
+        "xgm-yagyu-map",
+        "xgm-opening-items",
+        "xgm-opening-documents",
+        "gamefaqs-17422-archive"
+      ],
+      "entityIds": [
+        "yagyu-residence",
+        "abacus",
+        "kaleidoscope",
+        "power-jewel",
+        "artwork-10",
+        "four-guardians-right",
+        "fork",
+        "oolong-tea",
+        "four-guardians-left",
+        "wasabi"
+      ],
+      "instructions": [
+        {
+          "text": "暫時不要啟動湖邊祠堂；先原路回村，進入出生點旁的柳生陣屋。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening"
+          ]
+        },
+        {
+          "text": "本輪清單：算盤、萬花筒、力石、美人畫 #10、四神圖（右）、叉子、烏龍茶、四神圖（左）、山葵。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "xgm-yagyu-map",
+            "xgm-opening-items",
+            "xgm-opening-documents",
+            "gamefaqs-17422-archive"
+          ]
+        },
+        {
+          "text": "力石位於機關寶箱；本切片只記錄取得點，不把第三方解法圖搬入本站。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening"
+          ]
+        }
+      ],
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "柳生之庄／Yagyu Village／柳生の庄",
+      "status": "source-checked",
+      "confidence": "medium-high",
+      "verifiedAt": "2026-09-13",
+      "id": "yagyu-dragon-shrine",
+      "sequence": 50,
+      "kind": "boundary",
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": true,
+      "title": "啟動龍之祠並前往今庄",
+      "summary": "確認前項收集後再啟動祠堂，取得舞雷刀並結束本切片。",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-yagyu-opening",
+        "gamefaqs-17422-archive",
+        "remaster-opening-video"
+      ],
+      "entityIds": [
+        "dragon-shrine",
+        "buraitou"
+      ],
+      "instructions": [
+        {
+          "text": "回到湖邊祠堂；完成陣屋清單後才啟動。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening"
+          ]
+        },
+        {
+          "text": "啟動後取得舞雷刀並離開柳生之庄、前往今庄；後續尚未納入本批次。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-yagyu-opening",
+            "gamefaqs-17422-archive",
+            "remaster-opening-video"
+          ]
         }
       ]
     }

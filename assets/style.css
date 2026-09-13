@@ -475,3 +475,87 @@ footer a {
 .secondary-name { color: var(--muted); }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media (pointer: coarse) { .entity-tooltip { display:none; } }
+
+#walkthrough-root {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.walkthrough-step {
+  border-inline-start: 0.3rem solid var(--accent);
+}
+.walkthrough-step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.walkthrough-step-header h2 {
+  margin-block: 0;
+}
+.walkthrough-summary {
+  font-weight: 650;
+}
+.walkthrough-instructions {
+  padding-inline-start: 1.4rem;
+}
+.walkthrough-instructions li + li {
+  margin-block-start: 0.55rem;
+}
+.walkthrough-entities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 0.65rem;
+  padding: 0;
+  list-style: none;
+}
+.walkthrough-entity {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+  padding: 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: #171d19;
+}
+.walkthrough-entity-primary,
+.walkthrough-name-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.walkthrough-entity .badge {
+  flex: 0 0 auto;
+}
+.badge.name-editorial,
+.badge.name-pending {
+  border-color: var(--muted);
+  color: var(--muted);
+}
+.badge.name-in-game-verified {
+  border-color: #88c999;
+  color: #88c999;
+}
+.badge.name-source-listed {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.badge.warning {
+  border-color: #d99a31;
+  color: #f0bd64;
+}
+.badge.danger {
+  border-color: #d66b6b;
+  color: #ef9a9a;
+}
+.source-record {
+  overflow-wrap: anywhere;
+}
+.source-record small {
+  display: block;
+  margin-block: 0.25rem;
+}

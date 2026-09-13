@@ -58,6 +58,7 @@ export const fixture = () => ({
       affinity: null,
     },
   ],
+  walkthroughSteps: [],
 });
 test("validator accepts normalized source-scoped records and rejects unknown IDs, cycles, malformed quantities and leakage", () => {
   assert.equal(typeof mod.validate, "function");

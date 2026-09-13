@@ -6,7 +6,7 @@ export function validate(data) {
   const errors = [];
   const fail = (path, message) => errors.push(`${path}: ${message}`);
   if (!object(data)) return ["data: expected object"];
-  for (const key of ["sources", "entities", "actions", "stages"])
+  for (const key of ["sources", "entities", "actions", "stages", "walkthroughSteps"])
     if (!Array.isArray(data[key])) fail(key, "expected array");
   for (const key of ["media", "routes"])
     if (data[key] !== undefined && !Array.isArray(data[key])) fail(key, "expected array");
@@ -30,6 +30,9 @@ export function validate(data) {
     )
       fail(r.id, "invalid versions");
   };
+  const walkthroughSourceIds = new Set(
+    list(data.walkthroughSteps).flatMap((step) => list(step?.sourceIds)),
+  );
   for (const s of maps.sources.values()) {
     checkVersions(s);
     if (typeof s.title !== "string" || !s.title) fail(s.id, "missing title");
@@ -45,6 +48,13 @@ export function validate(data) {
         throw Error();
     } catch {
       fail(s.id, "unsafe source URL");
+    }
+    if (walkthroughSourceIds.has(s.id)) {
+      for (const key of ["sourceType", "region", "support"])
+        if (typeof s[key] !== "string" || !s[key].trim())
+          fail(s.id, `missing ${key}`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(s.accessedAt))
+        fail(s.id, "missing accessedAt");
     }
   }
   const ref = (r, id, type) => {
@@ -100,6 +110,51 @@ export function validate(data) {
         (!object(e[k]) || Object.values(e[k]).some((v) => typeof v !== "string"))
       )
         fail(e.id, `malformed ${k}`);
+    if (e.names !== undefined) {
+      if (!object(e.names)) fail(e.id, "invalid name evidence");
+      else
+        for (const language of ["zh-TW", "en", "ja"]) {
+          const scopedNames = e.names[language];
+          if (!object(scopedNames)) {
+            fail(e.id, `missing ${language} name evidence`);
+            continue;
+          }
+          for (const version of e.versions) {
+            const record = scopedNames[version];
+            if (!object(record)) {
+              fail(e.id, `missing ${language} ${version} name evidence`);
+              continue;
+            }
+            if (!["in-game-verified", "source-listed", "editorial", "pending", "conflicting"].includes(record.status))
+              fail(e.id, "invalid name evidence status");
+            if (!Array.isArray(record.sourceIds))
+              fail(e.id, "invalid name evidence sources");
+            const hasText = typeof record.text === "string" && record.text.trim();
+            if (record.status === "pending") {
+              if (record.text !== null || list(record.sourceIds).length)
+                fail(e.id, "pending name must not cite sources");
+            } else if (record.status === "conflicting") {
+              if (record.text !== null || list(record.sourceIds).length < 2)
+                fail(e.id, "conflicting name requires two sources and no selected text");
+            } else if (!hasText) fail(e.id, "name evidence text missing");
+            const sourcedName = ["in-game-verified", "source-listed", "conflicting"].includes(record.status);
+            if (sourcedName && !list(record.sourceIds).length)
+              fail(e.id, "sourced name missing sources");
+            for (const sourceId of list(record.sourceIds)) {
+              ref({ ...e, versions: [version] }, sourceId, "sources");
+              if (!list(e.sourceIds).includes(sourceId))
+                fail(e.id, "name evidence source missing from entity sourceIds");
+            }
+            if (
+              sourcedName &&
+              !list(record.sourceIds).some((sourceId) =>
+                list(maps.sources.get(sourceId)?.versions).includes(version),
+              )
+            )
+              fail(e.id, "name source version coverage missing");
+          }
+        }
+    }
     if (["chalk", "heike", "emblem", "melon", "necklace"].includes(e.id) && e.detail === undefined)
       fail(e.id, "missing illustrated detail");
     if (e.detail !== undefined) {
@@ -127,6 +182,79 @@ export function validate(data) {
         else if (entry.status !== undefined && entry.status !== "not-established") fail(e.id, "invalid map status");
       }
     }
+  }
+  const seenWalkthroughIds = new Set();
+  for (const step of list(data.walkthroughSteps)) {
+    if (!object(step) || !/^[a-z][a-z0-9-]*$/.test(step.id)) {
+      fail("walkthroughSteps", "invalid record ID");
+      continue;
+    }
+    if (seenWalkthroughIds.has(step.id))
+      fail(step.id, "duplicate walkthrough ID");
+    seenWalkthroughIds.add(step.id);
+    checkVersions(step);
+    if (!Number.isSafeInteger(step.sequence) || step.sequence < 0)
+      fail(step.id, "invalid sequence");
+    for (const key of ["region", "confidence"])
+      if (typeof step[key] !== "string" || !step[key].trim())
+        fail(step.id, `missing ${key}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(step.verifiedAt))
+      fail(step.id, "invalid verification date");
+    if (!["required", "optional", "boundary"].includes(step.kind))
+      fail(step.id, "invalid walkthrough kind");
+    if (
+      ![
+        "source-checked",
+        "cross-checked",
+        "in-game-verified",
+        "pending",
+        "conflicting",
+      ].includes(step.status)
+    )
+      fail(step.id, "invalid walkthrough status");
+    if (typeof step.title !== "string" || !step.title.trim())
+      fail(step.id, "missing title");
+    if (typeof step.summary !== "string" || !step.summary.trim())
+      fail(step.id, "missing summary");
+    if (!Array.isArray(step.entityIds) || !step.entityIds.length)
+      fail(step.id, "malformed entityIds");
+    if (!Array.isArray(step.instructions) || !step.instructions.length)
+      fail(step.id, "missing instructions");
+    else
+      for (const instruction of step.instructions) {
+        if (!object(instruction) || typeof instruction.text !== "string" || !instruction.text.trim())
+          fail(step.id, "invalid instruction text");
+        if (!Array.isArray(instruction?.sourceIds) || !instruction.sourceIds.length)
+          fail(step.id, "instruction missing sources");
+        for (const sourceId of list(instruction?.sourceIds)) {
+          ref(step, sourceId, "sources");
+          if (!list(step.sourceIds).includes(sourceId))
+            fail(step.id, "instruction source missing from step sources");
+        }
+        for (const version of list(step.versions))
+          if (
+            !list(instruction?.sourceIds).some((sourceId) =>
+              list(maps.sources.get(sourceId)?.versions).includes(version),
+            )
+          )
+            fail(step.id, "instruction source version coverage missing");
+      }
+    if (typeof step.missable !== "boolean") fail(step.id, "invalid missable");
+    if (typeof step.irreversible !== "boolean")
+      fail(step.id, "invalid irreversible");
+    if (typeof step.leavesArea !== "boolean")
+      fail(step.id, "invalid leavesArea");
+    if (!Array.isArray(step.sourceIds) || !step.sourceIds.length)
+      fail(step.id, "missing sources");
+    for (const id of list(step.sourceIds)) ref(step, id, "sources");
+    for (const version of list(step.versions))
+      if (
+        !list(step.sourceIds).some((sourceId) =>
+          list(maps.sources.get(sourceId)?.versions).includes(version),
+        )
+      )
+        fail(step.id, "source version coverage missing");
+    for (const id of list(step.entityIds)) ref(step, id, "entities");
   }
   for (const a of maps.actions.values()) {
     if (typeof a.title !== "string" || !a.title.trim())
