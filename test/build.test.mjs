@@ -10,8 +10,22 @@ test("static build validates data and uses relative URLs for Pages subpath", () 
   assert.equal(r.status, 0, r.stderr);
   const html = readFileSync("dist/index.html", "utf8");
   assert.match(html, /lang="zh-TW"/);
-  assert.match(html, /src="\.\/src\/app.js"/);
+  assert.match(html, /src="\.\/src\/shell.js"/);
+  assert.doesNotMatch(html, /src="\.\/src\/app.js"/);
+  assert.match(
+    readFileSync("dist/companions.html", "utf8"),
+    /src="\.\/src\/app.js"/,
+  );
   assert.ok(existsSync("dist/data/guide.json"));
   assert.doesNotMatch(html, /(?:src|href)="\/(?!\/)/);
   assert.ok(!existsSync("dist/test"));
+});
+
+test("CI installs Chromium before the complete test suite", () => {
+  const workflow = readFileSync(".github/workflows/ci.yml", "utf8");
+  const install = workflow.indexOf("npx playwright install --with-deps chromium");
+  const testSuite = workflow.indexOf("- run: npm test");
+  assert.ok(install >= 0, "CI installs Chromium");
+  assert.ok(testSuite >= 0, "CI runs the complete test suite");
+  assert.ok(install < testSuite, "Chromium must be ready before npm test");
 });

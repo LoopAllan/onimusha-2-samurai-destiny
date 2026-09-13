@@ -20,7 +20,7 @@ Open `http://localhost:8080/`. `file://` does not support this JSON-loading work
 
 ## Delivered scope
 
-- Eight ordered navigation categories, PS4 default / PS2 selector, responsive layout, keyboard/touch navigation.
+- Eight independently addressable category pages with normal relative links, one shared navigation/header/version shell, active-page semantics, responsive layout, and keyboard/touch navigation.
 - Six-step chalk → Heike → emblem → melon → delivery → necklace route, with **separate version-specific action records** and inspected community-source provenance.
 - Stage/recipient filters and multilingual alias search; ordered steps; direct item upstream/downstream links; current actions and pre-advance warnings.
 - One-way local stage progress with confirmation of risky advances, exchange consumption, per-version persistence, and reset limited to `onimusha2-guide:v1:<version>`. This notebook does not modify or synchronize the game's save. Users record actions only after completing them in game; it is not a simulator of NPC whereabouts.
@@ -42,8 +42,10 @@ The PS2 town guide supports the necklace deadline before speaking to ジュジ�
 - `src/engine.js`: pure eligibility and immutable transactions.
 - `src/query.js`: scoped search, stable order, derived reverse relations and warnings.
 - `src/progress.js`: injected storage adapter and scoped persistence.
-- `src/app.js`: safe DOM rendering and interaction orchestration; no `innerHTML`.
-- `scripts/`: validation, allowlisted static build and real browser smoke test.
+- `src/shell.js`: shared version preference and responsive navigation behavior on every page.
+- `src/app.js`: companions-only safe DOM rendering and interaction orchestration; no `innerHTML`.
+- `scripts/site.mjs`: shared page/navigation configuration and HTML generator.
+- `scripts/`: validation, allowlisted eight-document static build and real browser smoke test.
 
 Engine tests additionally cover AND/OR event conditions, inventory, companion/affinity gates, explicit conflict IDs, uncertain rewards (possible rewards are never auto-owned), returned/rejected gifts, elapsed **game minutes**, item grant timestamps and consecutive history interrupted by unrelated actions/map changes. These synthetic fixtures remain **tests only**. The shipped slice does not expose controls or claim content support for every generic engine capability.
 
