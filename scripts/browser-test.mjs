@@ -221,12 +221,12 @@ try {
     `http://127.0.0.1:${server.address().port}/guide/walkthrough.html`,
   );
   await page.waitForSelector("#walkthrough-root article", { timeout: 5000 });
-  assert.equal(await page.locator("#walkthrough-root article").count(), 5);
+  assert.equal(await page.locator("#walkthrough-root article").count(), 9);
   assert.deepEqual(
     await page.locator("#walkthrough-root article").evaluateAll((nodes) =>
       nodes.map((node) => Number(node.dataset.sequence)),
     ),
-    [10, 20, 30, 40, 50],
+    [10, 20, 30, 40, 50, 60, 70, 80, 90],
   );
   assert.match(await page.locator("#yagyu-village-path").innerText(), /Yagyu Village Map/);
   assert.match(await page.locator("#yagyu-village-path").innerText(), /日文 名稱待核/);
@@ -238,6 +238,7 @@ try {
   assert.deepEqual(ps4SourceTitles, [
     "Yagyu Village (1st Visit) — Onimusha 2 Remaster",
     "Onimusha 2: Samurai's Destiny Remaster walkthrough part 1 — YouTube",
+    "02. Imasho Town - 1st Visit — Onimusha 2 Remaster",
   ]);
   assert.equal(await page.locator("#walkthrough-root .walkthrough-instructions .citation-line").count() > 0, true);
   assert.ok(
@@ -252,15 +253,57 @@ try {
   const ps2SourceTitles = await page
     .locator("#walkthrough-sources a")
     .evaluateAll((links) => links.map((link) => link.textContent));
-  assert.equal(ps2SourceTitles.length, 7);
+  assert.deepEqual(ps2SourceTitles, [
+    "XGameMania：今庄の町 注10・17",
+    "Onimusha 2 Walkthrough v1.0 — Yagyu Village / Imasho Town",
+    "Walkthrough: Act 1 — Jubei's Village",
+    "鬼武者2 攻略情報サイト — 柳生の庄",
+    "鬼武者2 攻略情報サイト — 重要アイテム",
+    "鬼武者2 攻略情報サイト — 回復／強化アイテム",
+    "鬼武者2 攻略情報サイト — 書物",
+    "Onimusha 2: Samurai's Destiny — Gift Item FAQ",
+  ]);
   assert.ok(!ps2SourceTitles.includes("Yagyu Village (1st Visit) — Onimusha 2 Remaster"));
   assert.ok(!ps2SourceTitles.includes("Onimusha 2: Samurai's Destiny Remaster walkthrough part 1 — YouTube"));
+  for (const version of ["ps4", "ps2", "ps4"]) {
+    await page.selectOption("#version", version);
+    const isRemaster = version === "ps4";
+    assert.equal(await page.locator('#walkthrough-root article[id^="imasho-"]').count(), 4);
+    const town = await page.locator('#walkthrough-root article[id^="imasho-"]').allInnerTexts();
+    assert.match(town[0], isRemaster ? /EN Sugar Candy/ : /EN Confetti/);
+    assert.match(town[1], isRemaster ? /EN Kiseru/ : /EN Pipe/);
+    assert.match(town[3], isRemaster ? /EN Bow\s/ : /EN Bow and Arrows/);
+    assert.ok(town.every((text) => !/不可逆推進|離開目前區域/.test(text)));
+    const expectedTitle = isRemaster
+      ? "02. Imasho Town - 1st Visit — Onimusha 2 Remaster"
+      : "Onimusha 2 Walkthrough v1.0 — Yagyu Village / Imasho Town";
+    const claimTitles = await page.locator('article[id^="imasho-"] .walkthrough-instructions .citation-line a').allTextContents();
+    assert.deepEqual(claimTitles, Array(9).fill(expectedTitle));
+    assert.equal(await page.locator('article[id^="imasho-"] .walkthrough-entity').count(), 10);
+    assert.equal(await page.locator('article[id^="imasho-"] .name-editorial').count(), 10);
+    assert.equal(await page.locator('article[id^="imasho-"] .name-in-game-verified').count(), isRemaster ? 9 : 0);
+    assert.deepEqual(await page.locator("#walkthrough-sources a").allTextContents(), isRemaster ? ps4SourceTitles : ps2SourceTitles);
+  }
   for (const width of [360, 768, 1280]) {
     await page.setViewportSize({ width, height: 850 });
     assert.ok(
       await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
       `walkthrough overflow at ${width}`,
     );
+  }
+  await page.goto(`http://127.0.0.1:${server.address().port}/guide/walkthrough.html#imasho-arrival`);
+  await page.waitForSelector("#imasho-arrival");
+  await page.waitForFunction(() => {
+    const rect = document.querySelector("#imasho-arrival").getBoundingClientRect();
+    return rect.top >= 0 && rect.top < innerHeight;
+  });
+  assert.match(await page.locator(".walkthrough-intro").innerText(), /山道、通行證、首次送禮與礦山仍待後續查證/);
+  for (const version of ["ps2", "ps4"]) {
+    await page.selectOption("#version", version);
+    for (const width of [320, 360, 768, 1280]) {
+      await page.setViewportSize({ width, height: 850 });
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `walkthrough ${version} overflow at ${width}`);
+    }
   }
   if (process.env.SCREENSHOT_DIR) {
     await page.setViewportSize({ width: 360, height: 850 });

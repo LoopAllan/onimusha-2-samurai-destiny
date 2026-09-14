@@ -40,7 +40,11 @@
       "url": "https://xgamemania.com/onimusha/2/map/2.html",
       "versions": [
         "ps2"
-      ]
+      ],
+      "sourceType": "community-map-and-location-index",
+      "region": "PS2, Japanese release",
+      "accessedAt": "2026-09-14",
+      "support": "Japanese area title 今庄の町; existing notes 10 and 17 support the later melon chain, not a first-visit prerequisite. The map image is not redistributed or used to infer new route geometry."
     },
     {
       "id": "gf-gifts",
@@ -88,15 +92,15 @@
     },
     {
       "id": "gamechronicles-yagyu",
-      "title": "Onimusha 2 Walkthrough v1.0 — Yagyu Village",
+      "title": "Onimusha 2 Walkthrough v1.0 — Yagyu Village / Imasho Town",
       "url": "https://gamechronicles.com/guides/onimusha2/oni2guide.htm",
       "versions": [
         "ps2"
       ],
       "sourceType": "community-walkthrough",
       "region": "PS2, English localization",
-      "accessedAt": "2026-09-13",
-      "support": "Opening route, pickup sequence, residence checklist, and departure via the shrine. Its 'Imasho Town Map' wording conflicts with the Japanese map/document index and is not used as name evidence."
+      "accessedAt": "2026-09-14",
+      "support": "PS2 opening and Imasho Town first-visit prose: arrival gift, bar pickups, marketplace/stable pickups, smithy map, Cloth and timed lift. Its opening-area 'Imasho Town Map' wording is not used as opening-map name evidence. Town order here differs from the editorial order on this site; no mandatory pickup order is claimed."
     },
     {
       "id": "ign-yagyu-act-1",
@@ -182,6 +186,18 @@
       "region": "2025 Remaster, English UI",
       "accessedAt": "2026-09-13",
       "support": "Direct gameplay footage: Buraitou is acquired at 28:50 and the Imasho arrival sequence begins at 29:43."
+    },
+    {
+      "id": "solo-imasho-first",
+      "title": "02. Imasho Town - 1st Visit — Onimusha 2 Remaster",
+      "url": "https://web.archive.org/web/20260109071255id_/https://www.soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/02-imasho-town-1st-visit",
+      "versions": [
+        "ps4"
+      ],
+      "sourceType": "community-walkthrough-with-gameplay-screenshots",
+      "region": "2025 Remaster, English UI; guide is not PS4-hardware-specific",
+      "accessedAt": "2026-09-14",
+      "support": "Dated Wayback replay captured 2026-01-09 of the 2025 Remaster first-visit town exploration: street gift, bar, market/stables, smithy map, Cloth and lift/Bow. English acquisition labels were directly inspected in archived images 027 and 029–036. Text extraction was incomplete; original page HTML was read from the replay. PS4 view uses Remaster evidence, not a PS4-hardware playtest. No gift-exchange, timer duration, shop-total or mountain-route claims are adopted here."
     }
   ],
   "entities": [
@@ -2064,6 +2080,660 @@
         "solo-yagyu-opening",
         "gamefaqs-17422-archive"
       ]
+    },
+    {
+      "id": "imasho-town",
+      "name": "今庄",
+      "type": "place",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "今庄",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "今庄",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Imasho Town",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Imasho Town",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "今庄の町",
+            "status": "source-listed",
+            "sourceIds": [
+              "xgm-town"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Area names are source-listed, not UI-verified. Chinese is editorial.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "xgm-town"
+      ]
+    },
+    {
+      "id": "sugar-candy",
+      "name": "金平糖",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "金平糖",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "金平糖",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Confetti",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Sugar Candy",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "こんぺいとう",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 027; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "kiseru",
+      "name": "煙管",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "煙管",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "煙管",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Pipe",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Kiseru",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "キセル",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 029; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "folding-fan",
+      "name": "摺扇",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "摺扇",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "摺扇",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Folding Fan",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Folding Fan",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "扇子",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 030; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "globe",
+      "name": "地球儀",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "地球儀",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "地球儀",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Globe",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Globe",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "地球儀",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 031; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "ancient-documents",
+      "name": "古文書",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "古文書",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "古文書",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Ancient Documents",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Ancient Documents",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "古文書",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 032; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "tengu-mask",
+      "name": "天狗面具",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "天狗面具",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "天狗面具",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Tengu Mask",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Tengu Mask",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "天狗の面",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 033; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "imasho-town-map",
+      "name": "今庄地圖",
+      "type": "document",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "今庄地圖",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "今庄地圖",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Imasho Town Map",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Imasho Town Map",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 034; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
+    },
+    {
+      "id": "cloth",
+      "name": "布",
+      "type": "gift",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "布",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "布",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Cloth",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": "Cloth",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": "布",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamefaqs-17422-archive"
+            ]
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 035; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ]
+    },
+    {
+      "id": "bow",
+      "name": "弓",
+      "type": "weapon",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "弓",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "弓",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Bow and Arrows",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Bow",
+            "status": "in-game-verified",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English/Japanese sources and 2025 Remaster English UI; Traditional Chinese and Remaster Japanese names not established",
+      "confidence": "source-checked by version; see individual name states",
+      "note": "Remaster English acquisition label inspected in SoloPlayGuide image 036; PS2 names are text-listed, not in-game verified. No platform-specific controls inferred.",
+      "verifiedAt": "2026-09-14",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
     }
   ],
   "stages": [
@@ -3086,7 +3756,7 @@
       "irreversible": false,
       "leavesArea": true,
       "title": "啟動龍之祠並前往今庄",
-      "summary": "確認前項收集後再啟動祠堂，取得舞雷刀並結束本切片。",
+      "summary": "確認前項收集後再啟動祠堂，取得舞雷刀並銜接今庄城鎮探索。",
       "sourceIds": [
         "gamechronicles-yagyu",
         "solo-yagyu-opening",
@@ -3106,7 +3776,7 @@
           ]
         },
         {
-          "text": "啟動後取得舞雷刀並離開柳生之庄、前往今庄；後續尚未納入本批次。",
+          "text": "啟動後取得舞雷刀並離開柳生之庄、前往今庄；下一節接續城鎮探索。",
           "sourceIds": [
             "gamechronicles-yagyu",
             "solo-yagyu-opening",
@@ -3115,6 +3785,188 @@
           ]
         }
       ]
+    },
+    {
+      "id": "imasho-arrival",
+      "sequence": 60,
+      "title": "抵達今庄，先和街口男子交談",
+      "summary": "承接龍之祠轉場；恢復操作後開始城鎮探索。以下拾取順序是本站建議，不是事件前置。",
+      "entityIds": [
+        "imasho-town",
+        "sugar-candy"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・城鎮內／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version route corroboration",
+      "verifiedAt": "2026-09-14",
+      "kind": "optional",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "xgm-town",
+        "gamefaqs-17422-archive"
+      ],
+      "instructions": [
+        {
+          "text": "恢復操作後，和左側戴帽子的男子交談，取得金平糖。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "imasho-bar-pickups",
+      "sequence": 70,
+      "title": "酒館後院與二樓收集",
+      "summary": "先確認後院存檔處，再收集煙管與摺扇；不在此推定同伴事件或送禮條件。",
+      "entityIds": [
+        "kiseru",
+        "folding-fan"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・城鎮內／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version route corroboration",
+      "verifiedAt": "2026-09-14",
+      "kind": "optional",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ],
+      "instructions": [
+        {
+          "text": "進入酒館，從後門到後院；後院可存檔，寶箱內可取得煙管。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "回到酒館內上二樓，打開寶箱取得摺扇。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "imasho-market-stable",
+      "sequence": 80,
+      "title": "南側市集與馬廄收集",
+      "summary": "離開酒館後往城鎮南側探索，收齊地球儀、古文書與天狗面具。",
+      "entityIds": [
+        "globe",
+        "ancient-documents",
+        "tengu-mask"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・城鎮內／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version route corroboration",
+      "verifiedAt": "2026-09-14",
+      "kind": "optional",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ],
+      "instructions": [
+        {
+          "text": "往南到市集，右側攤位旁的箱子可取得地球儀。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "繼續到馬廄旁，和男子交談取得古文書。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "查看馬廄旁角落的寶箱，取得天狗面具。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "imasho-smithy-bow",
+      "sequence": 90,
+      "title": "鍛冶屋清路、拉桿與取弓",
+      "summary": "完成本輪城鎮探索；先清除障礙再操作升降台，不把限時機關當作永久漏拿期限。",
+      "entityIds": [
+        "imasho-town-map",
+        "cloth",
+        "bow"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・城鎮內／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version route corroboration",
+      "verifiedAt": "2026-09-14",
+      "kind": "optional",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first",
+        "gamefaqs-17422-archive"
+      ],
+      "instructions": [
+        {
+          "text": "往北到鍛冶屋，先開入口外的寶箱取得今庄地圖。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "進屋後暫時不要拉開關；沿屋內通路打破擋路的木製容器，在另一側寶箱取得布。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "清出通路後返回入口拉動開關，迅速沿已清空的通路跑到另一側升降台，搭台上樓取得弓。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
     }
   ]
 }
