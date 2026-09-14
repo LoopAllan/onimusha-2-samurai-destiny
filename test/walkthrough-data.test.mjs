@@ -19,7 +19,7 @@ const expectedIds = [
 test("published opening walkthrough is a complete version-separated Yagyu Village slice", () => {
   assert.deepEqual(validate(data), []);
   for (const version of ["ps2", "ps4"]) {
-    const steps = walkthroughView(data, version);
+    const steps = walkthroughView(data, version).filter((step) => step.id.startsWith("yagyu-"));
     assert.deepEqual(steps.map((step) => step.id), expectedIds, version);
     assert.ok(steps.every((step) => step.status !== "in-game-verified"));
     assert.ok(steps.every((step) => step.missable === false));
@@ -43,6 +43,13 @@ test("opening entities expose explicit name evidence without claiming a verified
         assert.ok(entity.names[language][version], `${id} ${language} ${version}`);
     }
   }
+});
+
+test("Imasho arrival instruction does not claim a more specific hat than its route sources support", () => {
+  const arrival = data.walkthroughSteps.find((step) => step.id === "imasho-arrival");
+  assert.ok(arrival, "Imasho arrival step");
+  assert.match(arrival.instructions[0].text, /左側(?:男子|戴帽子的男子)/);
+  assert.doesNotMatch(arrival.instructions[0].text, /斗笠/);
 });
 
 test("published opening preserves exact cited localized labels and direct Remaster transition provenance", () => {

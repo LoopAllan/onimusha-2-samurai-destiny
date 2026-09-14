@@ -1,6 +1,6 @@
 # Onimusha 2 · 旅途手帖
 
-A source-backed, Traditional Chinese static guide for **Onimusha 2: Samurai's Destiny**. Specification: [issue #1](https://github.com/LoopAllan/onimusha-2-samurai-destiny/issues/1). The published walkthrough currently covers the opening Yagyu Village slice only, not the complete game.
+A source-backed, Traditional Chinese static guide for **Onimusha 2: Samurai's Destiny**. Specification: [issue #1](https://github.com/LoopAllan/onimusha-2-samurai-destiny/issues/1). The walkthrough covers the Yagyu Village opening and first-visit Imasho town exploration through the smithy Bow pickup, not the complete first visit or game.
 
 ## Run and verify
 
@@ -22,6 +22,7 @@ Open `http://localhost:8080/`. `file://` does not support this JSON-loading work
 
 - Eight independently addressable category pages with normal relative links, one shared navigation/header/version shell, active-page semantics, responsive layout, and keyboard/touch navigation.
 - Five-step opening walkthrough from Yagyu Village through the Buraitou departure to Imasho, with claim-level citations, an explicit leave-area checkpoint, and PS2/2025 Remaster projections.
+- Four additional Imasho town checkpoints: street gift, bar backyard/upstairs, market/stables, smithy map/Cloth/lift/Bow. These are optional pickups in editorial order, not a mandatory event graph or permanent deadlines. Ten new entities preserve separately sourced PS2 names and Remaster English labels; Chinese is editorial and Remaster Japanese remains pending. The mountain path, permit, initial companion gifts and mine are outside this release; the existing chalk chain belongs to a later visit.
 - Nineteen opening-area names with per-version Traditional Chinese, English, and Japanese evidence states. Editorial translations and missing target-version names render as such instead of inheriting another version.
 - Six-step chalk → Heike → emblem → melon → delivery → necklace route, with **separate version-specific action records** and inspected community-source provenance.
 - Stage/recipient filters and multilingual alias search; ordered steps; direct item upstream/downstream links; current actions and pre-advance warnings.
@@ -61,7 +62,8 @@ Engine tests additionally cover AND/OR event conditions, inventory, companion/af
 - [AppMedia melon route](https://appmedia.jp/onimusha2/78917888) and [orange necklace](https://appmedia.jp/onimusha2/78919586): Remaster route, acquisition and delivery windows. These are two pages from **one publisher**, not independent cross-verification.
 - [XGameMania town, notes 10 and 17](https://xgamemania.com/onimusha/2/map/2.html): PS2 chain, delivery and collection windows.
 - [SoloPlayGuide Yagyu Village](https://soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/01-yagyu-village-1st-visit): Remaster opening route and English in-game acquisition screenshots.
-- [GameChronicles Yagyu Village](https://gamechronicles.com/guides/onimusha2/oni2guide.htm): PS2 opening route. Its conflicting map label is not used as name evidence.
+- [SoloPlayGuide Imasho first visit](https://soloplayguide.com/games/onimusha-2-samurai-s-destiny-remaster/guide/02-imasho-town-1st-visit): Remaster town prose and directly inspected English acquisition screenshots 027 and 029–036. Not a PS4-specific hardware playtest; no platform-specific controls are inferred. See [the bounded evidence audit](docs/imasho-first-visit-evidence.md).
+- [GameChronicles Yagyu Village / Imasho Town](https://gamechronicles.com/guides/onimusha2/oni2guide.htm): PS2 opening and town routes. Its conflicting opening-map label is not used as opening-map name evidence.
 - [XGameMania Yagyu Village](https://xgamemania.com/onimusha/2/map/1.html), [key items](https://xgamemania.com/onimusha/2/item3.html), [items](https://xgamemania.com/onimusha/2/item.html), and [documents](https://xgamemania.com/onimusha/2/item4.html): PS2 Japanese names and opening-area locations.
 - [GameFAQs Gift Item FAQ, archived 2025-04-29](https://web.archive.org/web/20250429020303/https://gamefaqs.gamespot.com/ps2/520511-onimusha-2-samurais-destiny/faqs/17422): PS2 English/Japanese item terminology; cited as an archive replay because the live page was blocked.
 
