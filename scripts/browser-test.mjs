@@ -221,12 +221,12 @@ try {
     `http://127.0.0.1:${server.address().port}/guide/walkthrough.html`,
   );
   await page.waitForSelector("#walkthrough-root article", { timeout: 5000 });
-  assert.equal(await page.locator("#walkthrough-root article").count(), 9);
+  assert.equal(await page.locator("#walkthrough-root article").count(), 13);
   assert.deepEqual(
     await page.locator("#walkthrough-root article").evaluateAll((nodes) =>
       nodes.map((node) => Number(node.dataset.sequence)),
     ),
-    [10, 20, 30, 40, 50, 60, 70, 80, 90],
+    [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130],
   );
   assert.match(await page.locator("#yagyu-village-path").innerText(), /Yagyu Village Map/);
   assert.match(await page.locator("#yagyu-village-path").innerText(), /日文 名稱待核/);
@@ -279,6 +279,17 @@ try {
       : "Onimusha 2 Walkthrough v1.0 — Yagyu Village / Imasho Town";
     const claimTitles = await page.locator('article[id^="imasho-"] .walkthrough-instructions .citation-line a').allTextContents();
     assert.deepEqual(claimTitles, Array(9).fill(expectedTitle));
+    const mountain = page.locator('article[id^="mountain-"]');
+    assert.equal(await mountain.count(), 4);
+    assert.deepEqual(await mountain.locator('.walkthrough-instructions .citation-line a').allTextContents(), Array(7).fill(expectedTitle));
+    assert.match(await page.locator('#mountain-buy-permit').innerText(), isRemaster ? /EN Mountain Permit/ : /EN Permit/);
+    assert.match(await page.locator('#mountain-path-pickups').innerText(), isRemaster ? /EN Unique Mushrooms/ : /EN Unique Mushroom\s/);
+    assert.match(await page.locator('#mountain-mine-entrance').innerText(), isRemaster ? /EN History Book Vol\. 4/ : /EN History Book #4/);
+    assert.match(await page.locator('#mountain-mine-entrance').innerText(), /不進入礦坑/);
+    assert.equal(await mountain.locator('.name-in-game-verified').count(), 0);
+    assert.equal(await mountain.locator('.walkthrough-entity').count(), 6);
+    assert.equal(await mountain.locator('.name-editorial').count(), 6);
+    assert.doesNotMatch((await mountain.allInnerTexts()).join(' '), /不可逆推進|離開目前區域|7000|2300/);
     assert.equal(await page.locator('article[id^="imasho-"] .walkthrough-entity').count(), 10);
     assert.equal(await page.locator('article[id^="imasho-"] .name-editorial').count(), 10);
     assert.equal(await page.locator('article[id^="imasho-"] .name-in-game-verified').count(), isRemaster ? 9 : 0);
@@ -297,7 +308,19 @@ try {
     const rect = document.querySelector("#imasho-arrival").getBoundingClientRect();
     return rect.top >= 0 && rect.top < innerHeight;
   });
-  assert.match(await page.locator(".walkthrough-intro").innerText(), /山道、通行證、首次送禮與礦山仍待後續查證/);
+  assert.match(await page.locator(".walkthrough-intro").innerText(), /首次送禮、同伴選定與礦坑內部仍待後續查證/);
+  await page.goto(`http://127.0.0.1:${server.address().port}/guide/index.html`);
+  await page.route('**/data/guide.json', async (route) => {
+    // Force data to arrive after native document fragment navigation.
+    await new Promise((resolveDelay) => setTimeout(resolveDelay, 100));
+    await route.continue();
+  });
+  await page.locator('a[href="./walkthrough.html#mountain-path-pickups"]').click();
+  await page.waitForSelector('#mountain-path-pickups');
+  await page.waitForFunction(() => {
+    const rect = document.querySelector('#mountain-path-pickups').getBoundingClientRect();
+    return rect.top >= 0 && rect.top <= 128;
+  });
   for (const version of ["ps2", "ps4"]) {
     await page.selectOption("#version", version);
     for (const width of [320, 360, 768, 1280]) {

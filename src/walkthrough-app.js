@@ -127,6 +127,9 @@ try {
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const data = await response.json();
   render(data);
+  // The fragment target may not exist during native page navigation.
+  const initialTarget = document.getElementById(location.hash.slice(1));
+  if (initialTarget && root.contains(initialTarget)) initialTarget.scrollIntoView();
   versionSelect.addEventListener("change", () => render(data));
 } catch (error) {
   root.textContent = `流程資料載入失敗：${error.message}`;

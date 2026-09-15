@@ -99,8 +99,8 @@
       ],
       "sourceType": "community-walkthrough",
       "region": "PS2, English localization",
-      "accessedAt": "2026-09-14",
-      "support": "PS2 opening and Imasho Town first-visit prose: arrival gift, bar pickups, marketplace/stable pickups, smithy map, Cloth and timed lift. Its opening-area 'Imasho Town Map' wording is not used as opening-map name evidence. Town order here differs from the editorial order on this site; no mandatory pickup order is claimed."
+      "accessedAt": "2026-09-15",
+      "support": "PS2 opening and Imasho Town first-visit prose: arrival gift, bar pickups, marketplace/stable pickups, smithy map, Cloth and timed lift. Its opening-area 'Imasho Town Map' wording is not used as opening-map name evidence. Town order here differs from the editorial order on this site; no mandatory pickup order is claimed. Imasho Town continuation read directly: mountain-path fixed pickups, permit guard, bar introduction, 100-gold Permit, return through guard and entrance History Book #4. Only source-listed English names adopted; no farming or relationship claims."
     },
     {
       "id": "ign-yagyu-act-1",
@@ -196,8 +196,8 @@
       ],
       "sourceType": "community-walkthrough-with-gameplay-screenshots",
       "region": "2025 Remaster, English UI; guide is not PS4-hardware-specific",
-      "accessedAt": "2026-09-14",
-      "support": "Dated Wayback replay captured 2026-01-09 of the 2025 Remaster first-visit town exploration: street gift, bar, market/stables, smithy map, Cloth and lift/Bow. English acquisition labels were directly inspected in archived images 027 and 029–036. Text extraction was incomplete; original page HTML was read from the replay. PS4 view uses Remaster evidence, not a PS4-hardware playtest. No gift-exchange, timer duration, shop-total or mountain-route claims are adopted here."
+      "accessedAt": "2026-09-15",
+      "support": "Dated Wayback replay captured 2026-01-09 of the 2025 Remaster first-visit town exploration: street gift, bar, market/stables, smithy map, Cloth and lift/Bow. English acquisition labels were directly inspected in archived images 027 and 029–036. Text extraction was incomplete; original page HTML was read from the replay. PS4 view uses Remaster evidence, not a PS4-hardware playtest. Continuation text also directly supports mountain-path fixed pickups, guard permit requirement, bar introduction event, 100-gold permit, return past guard and entrance History Book Vol. 4. New English names are source-listed only; no new images inspected. Beetle timing, farming totals, gifts and mine interior are excluded."
     }
   ],
   "entities": [
@@ -2734,6 +2734,258 @@
         "gamechronicles-yagyu",
         "solo-imasho-first"
       ]
+    },
+    {
+      "id": "unique-mushrooms",
+      "name": "珍奇蘑菇",
+      "type": "item",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "珍奇蘑菇",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "珍奇蘑菇",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Unique Mushroom",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Unique Mushrooms",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English walkthrough / 2025 Remaster English walkthrough; no Chinese or Japanese UI evidence",
+      "confidence": "community-source; text-listed names only",
+      "note": "Route and English labels read independently per version. Chinese labels are editorial; Japanese pending. No new gameplay images inspected or redistributed.",
+      "verifiedAt": "2026-09-15",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
+    },
+    {
+      "id": "telescope",
+      "name": "望遠鏡",
+      "type": "item",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "望遠鏡",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "望遠鏡",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Telescope",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Telescope",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English walkthrough / 2025 Remaster English walkthrough; no Chinese or Japanese UI evidence",
+      "confidence": "community-source; text-listed names only",
+      "note": "Route and English labels read independently per version. Chinese labels are editorial; Japanese pending. No new gameplay images inspected or redistributed.",
+      "verifiedAt": "2026-09-15",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
+    },
+    {
+      "id": "mountain-permit",
+      "name": "山道通行證",
+      "type": "item",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "山道通行證",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "山道通行證",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "Permit",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "Mountain Permit",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English walkthrough / 2025 Remaster English walkthrough; no Chinese or Japanese UI evidence",
+      "confidence": "community-source; text-listed names only",
+      "note": "Route and English labels read independently per version. Chinese labels are editorial; Japanese pending. No new gameplay images inspected or redistributed.",
+      "verifiedAt": "2026-09-15",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
+    },
+    {
+      "id": "history-book-4",
+      "name": "日本史記・卷四",
+      "type": "item",
+      "en": null,
+      "ja": null,
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "names": {
+        "zh-TW": {
+          "ps2": {
+            "text": "日本史記・卷四",
+            "status": "editorial",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": "日本史記・卷四",
+            "status": "editorial",
+            "sourceIds": []
+          }
+        },
+        "en": {
+          "ps2": {
+            "text": "History Book #4",
+            "status": "source-listed",
+            "sourceIds": [
+              "gamechronicles-yagyu"
+            ]
+          },
+          "ps4": {
+            "text": "History Book Vol. 4",
+            "status": "source-listed",
+            "sourceIds": [
+              "solo-imasho-first"
+            ]
+          }
+        },
+        "ja": {
+          "ps2": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          },
+          "ps4": {
+            "text": null,
+            "status": "pending",
+            "sourceIds": []
+          }
+        }
+      },
+      "aliases": [],
+      "status": "verified",
+      "region": "PS2 English walkthrough / 2025 Remaster English walkthrough; no Chinese or Japanese UI evidence",
+      "confidence": "community-source; text-listed names only",
+      "note": "Route and English labels read independently per version. Chinese labels are editorial; Japanese pending. No new gameplay images inspected or redistributed.",
+      "verifiedAt": "2026-09-15",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ]
     }
   ],
   "stages": [
@@ -3958,6 +4210,165 @@
         },
         {
           "text": "清出通路後返回入口拉動開關，迅速沿已清空的通路跑到另一側升降台，搭台上樓取得弓。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "mountain-path-pickups",
+      "sequence": 100,
+      "title": "沿山道收集蘑菇與望遠鏡",
+      "summary": "承接鍛冶屋取弓後的山道探索；固定拾取可先整理，不以畫面編號推定位置。",
+      "entityIds": [
+        "unique-mushrooms",
+        "telescope"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・山道至礦山入口／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version corroboration",
+      "verifiedAt": "2026-09-15",
+      "kind": "optional",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ],
+      "instructions": [
+        {
+          "text": "離開鍛冶屋後，沿通往金山的山道前進，處理沿路敵人。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "山道前段可拾取珍奇蘑菇；繼續沿路查看寶箱，取得望遠鏡。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "mountain-guard",
+      "sequence": 110,
+      "title": "上階梯向礦山守衛確認通行條件",
+      "summary": "守衛要求通行證；本段不把採集或強化建議當作通關硬性前置。",
+      "entityIds": [
+        "mountain-permit"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・山道至礦山入口／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version corroboration",
+      "verifiedAt": "2026-09-15",
+      "kind": "required",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ],
+      "instructions": [
+        {
+          "text": "繼續沿山道上階梯，與礦山守衛交談；尚未持有通行證時不能通過，先返回今庄。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "mountain-buy-permit",
+      "sequence": 120,
+      "title": "回酒館購買山道通行證",
+      "summary": "返回酒館，經過惠瓊與孫市登場事件後買證；本卡不提供首次送禮或同伴選定策略。",
+      "entityIds": [
+        "mountain-permit"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・山道至礦山入口／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version corroboration",
+      "verifiedAt": "2026-09-15",
+      "kind": "required",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ],
+      "instructions": [
+        {
+          "text": "返回今庄並進入酒館，往內走會遇到惠瓊與孫市的登場事件。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "到酒館後方和男子交談，以 100 金購買山道通行證。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        }
+      ],
+      "missable": false,
+      "irreversible": false,
+      "leavesArea": false
+    },
+    {
+      "id": "mountain-mine-entrance",
+      "sequence": 130,
+      "title": "持證返回，停在礦山入口",
+      "summary": "本批次走到守衛放行後的入口寶箱，不進入礦坑；內部探索、同伴分歧與頭目留待後續。",
+      "entityIds": [
+        "mountain-permit",
+        "history-book-4"
+      ],
+      "versions": [
+        "ps2",
+        "ps4"
+      ],
+      "region": "今庄初訪・山道至礦山入口／PS2 and 2025 Remaster independently sourced",
+      "status": "source-checked",
+      "confidence": "community-source; one route source per version, not independent same-version corroboration",
+      "verifiedAt": "2026-09-15",
+      "kind": "boundary",
+      "sourceIds": [
+        "gamechronicles-yagyu",
+        "solo-imasho-first"
+      ],
+      "instructions": [
+        {
+          "text": "回到山道，向礦山守衛出示山道通行證，通過守衛。",
+          "sourceIds": [
+            "gamechronicles-yagyu",
+            "solo-imasho-first"
+          ]
+        },
+        {
+          "text": "在礦山入口旁的寶箱取得日本史記・卷四。本批次在入口收集後結束。",
           "sourceIds": [
             "gamechronicles-yagyu",
             "solo-imasho-first"

@@ -12,7 +12,7 @@ test("first Imasho town exploration is a bounded four-step slice with independen
     const steps = all.filter((step) => step.id.startsWith("imasho-"));
     assert.deepEqual(steps.map((step) => step.id), ids);
     assert.deepEqual(steps.map((step) => step.sequence), [60, 70, 80, 90]);
-    assert.equal(all.length, 9);
+    assert.equal(all.filter((step) => step.sequence <= 90).length, 9);
     assert.ok(steps.every((step) => !step.irreversible && !step.missable && !step.leavesArea));
     assert.ok(steps.every((step) => step.kind === "optional"));
     const entities = new Set(steps.flatMap((step) => step.entities.map((entity) => entity.id)));
