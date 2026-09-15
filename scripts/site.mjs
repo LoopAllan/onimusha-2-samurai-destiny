@@ -13,14 +13,14 @@ const home = `
 <section class="hero">
   <p class="eyebrow">SAMURAI'S DESTINY · FIELD NOTES</p>
   <h1>從旅途入口，選擇要查的手帖。</h1>
-  <p>本站按攻略類別分頁整理；目前可讀柳生之庄開場、今庄初訪・城鎮探索與角色送禮交換手帖，其餘頁面保留清楚的研究邊界。</p>
+  <p>本站按攻略類別分頁整理；目前可讀柳生之庄開場、今庄初訪・城鎮探索、山道往返至礦山入口與角色送禮交換手帖，其餘頁面保留清楚的研究邊界。</p>
   <div class="badges"><span>繁體中文</span><span>PS4 Remaster／PS2 原版分開核對</span><span>來源文字核對 · 未實機驗證</span></div>
 </section>
 <section class="entry-panel panel" aria-labelledby="available-now">
   <p class="eyebrow">AVAILABLE NOW</p>
-  <h2 id="available-now">目前可讀：開場、今庄城鎮探索與角色送禮</h2>
-  <p>主線手帖延伸至今庄鍛冶屋取得弓；白墨交換鏈屬後續再訪，不是初訪收集的前置。兩者都能依版本查看名稱狀態與逐項來源。</p>
-  <p><a class="button-link" href="./walkthrough.html">開啟主線流程</a> <a class="button-link" href="./walkthrough.html#imasho-arrival">接續今庄初訪</a> <a class="button-link" href="./companions.html">開啟角色送禮手帖</a></p>
+  <h2 id="available-now">目前可讀：開場至礦山入口與角色送禮</h2>
+  <p>主線手帖由今庄鍛冶屋取得弓，接續山道拾取、守衛、酒館買證與礦山入口寶箱；尚未進入礦坑。白墨交換鏈屬後續再訪，不是初訪收集的前置。兩者都能依版本查看名稱狀態與逐項來源。</p>
+  <p><a class="button-link" href="./walkthrough.html">開啟主線流程</a> <a class="button-link" href="./walkthrough.html#imasho-arrival">接續今庄初訪</a> <a class="button-link" href="./walkthrough.html#mountain-path-pickups">取弓後接續山道</a> <a class="button-link" href="./companions.html">開啟角色送禮手帖</a></p>
 </section>`;
 
 function researchPage({ section, heading, intro, panelHeading, panelBody, extra = "" }) {
@@ -36,11 +36,11 @@ function researchPage({ section, heading, intro, panelHeading, panelBody, extra 
 const walkthrough = `
 <section class="hero" data-status="published-slice">
   <p class="eyebrow">WALKTHROUGH · YAGYU &amp; IMASHO TOWN</p>
-  <h1>從柳生之庄走到今庄鍛冶屋。</h1>
-  <p>主線手帖包含開場五節點，以及今庄初訪・城鎮探索四節點。流程與名稱按 PS2／2025 Remaster 分開投影；待核語言不跨版本補值。Remaster 來源不等於 PS4 硬體實測，不據此推定操作按鍵。</p>
+  <h1>從柳生之庄走到礦山入口。</h1>
+  <p>主線手帖包含開場五節點、今庄初訪・城鎮探索四節點，以及山道往返四節點。流程與名稱按 PS2／2025 Remaster 分開投影；待核語言不跨版本補值。Remaster 來源不等於 PS4 硬體實測，不據此推定操作按鍵。</p>
   <div class="status-row"><span class="badge verified">來源逐項核對</span><span class="badge unknown">非官方／非完整攻略</span></div>
 </section>
-<section class="panel walkthrough-intro"><h2>本批次界線</h2><p>起點為柳生之庄開場，本次延伸至今庄鍛冶屋取得弓。初訪城鎮四節點依序整理街口、酒館、市集／馬廄與鍛冶屋，屬編輯建議順序，不是必須依序觸發的遊戲事件。取得弓後仍在城鎮；山道、通行證、首次送禮與礦山仍待後續查證，不代表完整今庄初訪已完成。</p><p>白墨交換鏈屬後續再訪，不是本段前置；新增城鎮步驟沒有宣稱永久漏拿期限。<a href="#imasho-arrival">直接閱讀今庄初訪</a></p></section>
+<section class="panel walkthrough-intro"><h2>本批次界線</h2><p>起點為柳生之庄開場；今庄鍛冶屋取得弓後，接續山道拾取、守衛要求通行證、回酒館買證與持證返回，在礦山入口寶箱收集後停止，不進入礦坑。收集採編輯建議順序，不是必須依序觸發的遊戲事件；守衛需要通行證則有兩版本各自來源支持。</p><p>首次送禮、同伴選定與礦坑內部仍待後續查證，不代表完整今庄初訪已完成。若要規劃首次送禮或同伴路線，請先暫停推進並另查該版本攻略；本站尚未涵蓋其時機與機會成本。甲蟲出現時間、刷錢總額與全商店清單也不在本批次。白墨交換鏈屬後續再訪，不是本段前置；新增步驟沒有宣稱永久漏拿期限。<a href="#mountain-path-pickups">取弓後接續山道</a> · <a href="#imasho-arrival">閱讀今庄城鎮探索</a></p></section>
 <div id="walkthrough-root" aria-live="polite">正在載入流程資料……</div>
 <section class="panel"><h2>名稱狀態怎麼看</h2><p><strong>實機畫面核對</strong>只表示來源頁的目標版本畫面直接顯示該名稱；<strong>來源列名</strong>表示攻略文字使用此名稱但沒有同頁 UI 畫面；<strong>本站暫譯</strong>與<strong>待核</strong>都不是遊戲內正式譯名。</p></section>
 <section class="panel"><h2>本切片來源</h2><div id="walkthrough-sources"></div></section>`;
@@ -139,7 +139,7 @@ const content = {
 
 const descriptions = {
   home: "鬼武者2 繁中旅途手帖：依攻略類別進入來源可追溯的研究頁面。",
-  walkthrough: "鬼武者2 主線流程：柳生之庄開場與今庄初訪城鎮探索，至鍛冶屋取得弓的分版本來源攻略。",
+  walkthrough: "鬼武者2 主線流程：柳生之庄、今庄城鎮、山道往返與礦山入口寶箱的分版本來源攻略，不含礦坑內部。",
   companions: "鬼武者2 角色送禮手帖：分版本追蹤一條有來源的交換鏈。",
   collectibles: "鬼武者2 道具收集研究頁：逐筆核對版本、位置與來源。",
   equipment: "鬼武者2 裝備與道具研究頁：名稱、用途與取得條件待核。",
